@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>建筑猎聘搜索页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/comm_hr.css" >
+    <link rel="stylesheet" href="./css/Plogin.css" >
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/jigsaw.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body> 
+         <!-- 替换alter的样式表 -->
+        <!-- <div id='identifier' class="alert alert-warning">
+                <a href="#" class="close" data-dismiss="alert">
+                    &times;
+                </a>
+                <strong>警告！</strong><span></span>
+            </div> -->
+<header style="width:100%;height: 109px;overflow:hidden; " >
+    <iframe src="commom_hr/header3.html" width="100%" height="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"  ></iframe>
+</header>
+
+
+<div class="details">
+   <div class="Cde">
+       <div class="Plogin">
+            <div class="jq22-container" style="padding-top:100px">
+                    <div class="login-wrap">
+                        <div class="login-html">
+                            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">密码登录</label>
+                            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">短信登录</label>
+                            <div class="login-form">
+                                <form>
+                                <div class="sign-in-htm">
+                                    <div class="group">
+                                        <label for="user" class="label">用户名</label>
+                                        <input id="username" name="username" value="admin" type="text" class="input">
+                                    </div>
+                                    <div class="group">
+                                        <label for="pass" class="label">密码</label>
+                                        <input id="password" type="password" class="input" data-type="password">
+                                    </div>
+                                    <div class="group">
+                                        <div class="container">
+                                            <div id="captcha" style="position: relative" data-type="password"></div>
+                                            <div id="msg"></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="group">
+                                        <input id="check" type="checkbox" class="check" checked>
+                                        <label for="check"><span class="icon"></span> 保持登录</label>
+                                    </div>						 -->
+                                    <div class="group">
+                                        <input type="button" class="button" value="登录" onClick="sub()">
+                                    </div>
+                                    <div class="hr"></div>
+                                    <div class="foot-lnk">
+                                        <a href="#forgot">忘记密码?</a>
+                                    </div>
+                                </div>
+                                </form>
+                                <form>
+                                        <div class="sign-up-htm">
+                                            <div class="group">
+                                                <label for="user" class="label">手机号</label>
+                                                <input id="phone" type="text" class="input">
+                                            </div>
+                                            <div class="group">
+                                                <label for="pass" class="label">短信验证码</label>
+                                                <input id="num" type="text" class="input" style="width:150px;" >
+                                                <span class="msgs">获取短信验证码</span>
+                                            </div>
+                                           
+                                            <div class="group" style="    padding-top: 130px;">
+                                                    <input type="button" class="button" value="登录" id='subs'>
+                                                </div>
+                                                <div class="hr"></div>
+                                                <div class="foot-lnk">
+                                                    <a href="#forgot">忘记密码?</a>
+                                                </div>
+                                        </form>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script src="js/jigsaw.js"></script>
+                <script>
+                    var flag=false;	
+                    function sub(){
+                        var name=document.getElementById('username').value;
+                        var pass=document.getElementById('password').value;
+                        var cname="admin";
+                        var cpass="123";
+                        if(name==cname && pass==cpass && flag==true){
+                        alert("登录成功!")
+                            //window.location.href="#";
+                        }else{
+                            if(flag==false){
+                                alert("验证失败!")
+                                return;
+                            }
+                            alert("用户名或密码错误!")
+                        }
+                            }
+                      jigsaw.init(document.getElementById('captcha'), function () {
+                       flag=true;
+                    document.getElementById('msg').innerHTML = '验证成功！'  
+                  })
+
+                    $(function  () {
+                        //获取短信验证码
+                        var validCode=true;
+                        $(".msgs").click (function  () {
+                            var time=30;
+                            var code=$(this);
+                            if (validCode) {
+                                validCode=false;
+                                code.addClass("msgs1");
+                            var t=setInterval(function  () {
+                                time--;
+                                code.html(time+"秒");
+                                if (time==0) {
+                                    clearInterval(t);
+                                code.html("重新获取");
+                                    validCode=true;
+                                code.removeClass("msgs1");
+
+                                }
+                            },1000)
+                            }
+                        })
+                        //手机号码登录
+                        $('#subs').click(function(){
+                            var mobile=$('#phone').val();
+                                var re=/^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                                if (!re.test(mobile)){
+                                  alert("手机格式不正确")
+                                    // 自定义弹出框
+                                //    $('#identifier').alert().find('span').html('手机格式不正确');
+                                  return false ;
+                                }
+                                // setTimeout(function () {
+                                //     $('#identifier').alert('close');
+                                // },1500)
+
+                                var mobile=$("#num").val();
+                                var re=/^\d{6}$/
+                                if (!re.test(mobile)){
+                                    alert("验证码不正确");
+                                    // 自定义弹出框
+                                    //    $('#identifier').alert().find('span').html('验证码不正确');
+                                }
+                                // setTimeout(function () {
+                                //   $('#identifier').alert('close');
+                                // },1500)
+
+                        })
+                      
+	
+                         
+                    })
+                </script>
+                
+       </div>
+   </div>
+</div>
+
+</body>
+</html>
