@@ -5,73 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ec7405a-e04a-453c-9409-e783c9d1eacb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/headhunter.iml" afterPath="$PROJECT_DIR$/.idea/headhunter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/verify.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage.html" afterPath="$PROJECT_DIR$/backstage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.3.7-dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.3.7-dist/js/npm.js" afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/js/npm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commom_hr/css/comm_hr.css" afterPath="$PROJECT_DIR$/commom_hr/css/comm_hr.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commom_hr/foot.html" afterPath="$PROJECT_DIR$/commom_hr/foot.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commom_hr/header.html" afterPath="$PROJECT_DIR$/commom_hr/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commom_hr/header2.html" afterPath="$PROJECT_DIR$/commom_hr/header2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.rb" afterPath="$PROJECT_DIR$/config.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/activefont.css" afterPath="$PROJECT_DIR$/css/activefont.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/backstage.css" afterPath="$PROJECT_DIR$/css/backstage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/hr_de.css" afterPath="$PROJECT_DIR$/css/hr_de.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/hr_detial.css" afterPath="$PROJECT_DIR$/css/hr_detial.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/hunting.css" afterPath="$PROJECT_DIR$/css/hunting.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/login.css" afterPath="$PROJECT_DIR$/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/perfect-scrollbar.css" afterPath="$PROJECT_DIR$/css/perfect-scrollbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/seek_dr.css" afterPath="$PROJECT_DIR$/css/seek_dr.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hr_de.html" afterPath="$PROJECT_DIR$/hr_de.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hr_detial.html" afterPath="$PROJECT_DIR$/hr_detial.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务.html" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/FZSTK.css" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/FZSTK.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/animate.min.css" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/animate.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/aptitude.css" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/aptitude.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/b.js.下载" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/b.js.下载" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/bsl.js.下载" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/bsl.js.下载" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/component.css" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/fix.css" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/fix.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/h.js.下载" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/h.js.下载" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/header_footer.css" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/header_footer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/hm.js.下载" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/hm.js.下载" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/jquery-1.11.1.min.js.下载" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/jquery-1.11.1.min.js.下载" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/m-webim-lite.css" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/m-webim-lite.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/main.js.下载" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/main.js.下载" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/main_icon_invite_mess_api.js.下载" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/main_icon_invite_mess_api.js.下载" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/projectDetail.css" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/projectDetail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/saved_resource.html" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/saved_resource.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/title2.css" afterPath="$PROJECT_DIR$/images/广东建筑工程施工总承包资质代办_广东建筑工程施工总承包资质办理-「中住71」建筑企业资质服务_files/title2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/backstage.js" afterPath="$PROJECT_DIR$/js/backstage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/citys.json" afterPath="$PROJECT_DIR$/js/citys.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/distpicker.data.js" afterPath="$PROJECT_DIR$/js/distpicker.data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/distpicker.js" afterPath="$PROJECT_DIR$/js/distpicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jqthumb.js" afterPath="$PROJECT_DIR$/js/jqthumb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-1.11.1.min.js" afterPath="$PROJECT_DIR$/js/jquery-1.11.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/slider.js" afterPath="$PROJECT_DIR$/js/slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/backstage.scss" afterPath="$PROJECT_DIR$/sass/backstage.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/hr_de.scss" afterPath="$PROJECT_DIR$/sass/hr_de.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/hr_detial.scss" afterPath="$PROJECT_DIR$/sass/hr_detial.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/hunting.scss" afterPath="$PROJECT_DIR$/sass/hunting.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/login.scss" afterPath="$PROJECT_DIR$/sass/login.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/seek_dr.scss" afterPath="$PROJECT_DIR$/sass/seek_dr.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seek_hr.html" afterPath="$PROJECT_DIR$/seek_hr.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2.html" afterPath="$PROJECT_DIR$/test2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zuche.html" afterPath="$PROJECT_DIR$/zuche.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Plogin.css" afterPath="$PROJECT_DIR$/css/Plogin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personLogon.html" afterPath="$PROJECT_DIR$/personLogon.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -89,18 +26,18 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
+            <state relative-caret-position="809">
               <caret line="36" column="95" lean-forward="false" selection-start-line="36" selection-start-column="95" selection-end-line="36" selection-end-column="95" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backstage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="backstage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backstage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="6690" column="123" lean-forward="false" selection-start-line="6690" selection-start-column="123" selection-end-line="6690" selection-end-column="123" />
+            <state relative-caret-position="238">
+              <caret line="6710" column="0" lean-forward="false" selection-start-line="6710" selection-start-column="0" selection-end-line="6710" selection-end-column="0" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -146,6 +83,7 @@
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#section#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#input#0;n#span#1;n#section#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#span#3;n#section#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -160,42 +98,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backstage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/backstage.js">
+      <file leaf-file-name="personLogon.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/personLogon.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1049" column="7" lean-forward="false" selection-start-line="1049" selection-start-column="7" selection-end-line="1049" selection-end-column="7" />
+            <state relative-caret-position="50">
+              <caret line="155" column="27" lean-forward="true" selection-start-line="155" selection-start-column="27" selection-end-line="155" selection-end-column="27" />
               <folding>
-                <element signature="e#109#11385#0" expanded="false" />
-                <element signature="n#!!block;n#chang_info#0" expanded="false" />
-                <element signature="n#!!block;n#bli#0" expanded="false" />
-                <element signature="n#!!block;n#alert_x#0" expanded="false" />
-                <element signature="n#!!block;n#x_remove#0" expanded="false" />
-                <element signature="n#!!block;n#click_s#0" expanded="false" />
-                <element signature="n#!!block;n#click_dh#0" expanded="false" />
-                <element signature="n#!!block;n#click_top#0" expanded="false" />
-                <element signature="n#!!block;n#click_delete#0" expanded="false" />
-                <element signature="n#!!block;n#area_city#0" expanded="false" />
-                <element signature="n#!!block;n#click_judge#0" expanded="false" />
-                <element signature="n#!!block;n#click_radio#0" expanded="false" />
-                <element signature="n#!!block;n#click_remve#0" expanded="false" />
-                <element signature="n#!!block;n#bind_input#0" expanded="false" />
-                <element signature="n#!!block;n#obclicks#0" expanded="false" />
-                <element signature="n#!!block;n#click_clone#0" expanded="false" />
-                <element signature="n#!!block;n#child_remove#0" expanded="false" />
-                <element signature="e#23041#23164#0" expanded="false" />
-                <marker date="1520582355303" expanded="true" signature="716:729" ph="..." />
-                <marker date="1520582355303" expanded="true" signature="2365:2382" ph="..." />
-                <marker date="1520582355303" expanded="true" signature="12478:12485" ph="×" />
-                <marker date="1520582355303" expanded="true" signature="14202:14212" ph="..." />
-                <marker date="1520582355303" expanded="true" signature="22570:22583" ph="..." />
-                <marker date="1520582355303" expanded="true" signature="28561:28628" ph="..." />
-                <marker date="1520582355303" expanded="true" signature="28734:28763" ph="..." />
-                <marker date="1520582355303" expanded="true" signature="28788:28897" ph="..." />
-                <marker date="1520582355303" expanded="true" signature="28935:29030" ph="..." />
-                <marker date="1520582355303" expanded="true" signature="29072:29167" ph="..." />
-                <marker date="1520582355303" expanded="true" signature="29448:29462" ph="..." />
+                <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verify.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/verify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10025">
+              <caret line="174" column="35" lean-forward="true" selection-start-line="174" selection-start-column="35" selection-end-line="174" selection-end-column="35" />
+              <folding>
+                <marker date="1539661090933" expanded="true" signature="25890:25899" ph="..." />
+                <marker date="1539661090933" expanded="true" signature="30942:31145" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Plogin.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/Plogin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="132" column="22" lean-forward="false" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -207,8 +140,8 @@
       <list>
         <option value="TypeScript File" />
         <option value="tsconfig.json" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -250,6 +183,9 @@
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/js/backstage.js" />
         <option value="$PROJECT_DIR$/backstage.html" />
+        <option value="$PROJECT_DIR$/js/verify.js" />
+        <option value="$PROJECT_DIR$/css/Plogin.css" />
+        <option value="$PROJECT_DIR$/personLogon.html" />
       </list>
     </option>
   </component>
@@ -260,10 +196,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="-4" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -425,15 +361,15 @@
       <workItem from="1520581863611" duration="1435000" />
       <workItem from="1520838091408" duration="9000" />
       <workItem from="1521619439156" duration="6241000" />
+      <workItem from="1539660872520" duration="5292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="584977000" />
+    <option name="totallyTimeSpent" value="590269000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-4" width="1456" height="876" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17489421" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -493,27 +429,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6550">
-          <caret line="262" column="45" lean-forward="false" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hr_de.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/hr_de.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5175">
-          <caret line="207" column="24" lean-forward="true" selection-start-line="207" selection-start-column="24" selection-end-line="207" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hr_detial.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1625">
@@ -745,17 +660,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" column="95" lean-forward="false" selection-start-line="36" selection-start-column="95" selection-end-line="36" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/backstage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="7500">
           <caret line="1049" column="7" lean-forward="false" selection-start-line="1049" selection-start-column="7" selection-end-line="1049" selection-end-column="7" />
           <folding>
             <element signature="e#109#11385#0" expanded="false" />
@@ -776,25 +683,14 @@
             <element signature="n#!!block;n#click_clone#0" expanded="false" />
             <element signature="n#!!block;n#child_remove#0" expanded="false" />
             <element signature="e#23041#23164#0" expanded="false" />
-            <marker date="1520582355303" expanded="true" signature="716:729" ph="..." />
-            <marker date="1520582355303" expanded="true" signature="2365:2382" ph="..." />
-            <marker date="1520582355303" expanded="true" signature="12478:12485" ph="×" />
-            <marker date="1520582355303" expanded="true" signature="14202:14212" ph="..." />
-            <marker date="1520582355303" expanded="true" signature="22570:22583" ph="..." />
-            <marker date="1520582355303" expanded="true" signature="28561:28628" ph="..." />
-            <marker date="1520582355303" expanded="true" signature="28734:28763" ph="..." />
-            <marker date="1520582355303" expanded="true" signature="28788:28897" ph="..." />
-            <marker date="1520582355303" expanded="true" signature="28935:29030" ph="..." />
-            <marker date="1520582355303" expanded="true" signature="29072:29167" ph="..." />
-            <marker date="1520582355303" expanded="true" signature="29448:29462" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backstage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6690" column="123" lean-forward="false" selection-start-line="6690" selection-start-column="123" selection-end-line="6690" selection-end-column="123" />
+        <state relative-caret-position="238">
+          <caret line="6710" column="0" lean-forward="false" selection-start-line="6710" selection-start-column="0" selection-end-line="6710" selection-end-column="0" />
           <folding>
             <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -840,6 +736,7 @@
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#section#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#input#0;n#span#1;n#section#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#span#3;n#section#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -849,6 +746,43 @@
             <element signature="n#style#0;n#section#4;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#section#4;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#textarea#0;n#span#1;n#section#4;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="36" column="95" lean-forward="false" selection-start-line="36" selection-start-column="95" selection-end-line="36" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/Plogin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="132" column="22" lean-forward="false" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/verify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10025">
+          <caret line="174" column="35" lean-forward="true" selection-start-line="174" selection-start-column="35" selection-end-line="174" selection-end-column="35" />
+          <folding>
+            <marker date="1539661090933" expanded="true" signature="25890:25899" ph="..." />
+            <marker date="1539661090933" expanded="true" signature="30942:31145" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personLogon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="155" column="27" lean-forward="true" selection-start-line="155" selection-start-column="27" selection-end-line="155" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

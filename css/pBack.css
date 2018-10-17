@@ -1,0 +1,299 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+#pcounts {
+  padding-top: 20px;
+  width: 100%;
+  min-height: 629px;
+  background: #F8F8F8;
+}
+
+.pcount {
+  width: 1200px;
+  min-height: 629px;
+  margin: 0 auto;
+}
+
+.navShow {
+  width: 984px;
+  padding: 20px;
+  background: #FFF;
+  height: 100%;
+}
+.navShow .title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+.navShow .title p {
+  font-size: 14px;
+  padding-left: 10px;
+  border-left: 2px solid #88b7e0;
+  font-weight: 700;
+}
+
+.nav {
+  width: 156px;
+  background: #E7EBEF;
+  padding-left: 30px;
+  padding-right: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.nav a {
+  display: inline-block;
+  padding-top: 30px;
+  color: #000000;
+}
+.nav dd a {
+  font-size: 12px;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  display: block;
+  padding-left: 10px;
+}
+.nav dt a {
+  display: block;
+}
+.nav dt a .glyphicon {
+  float: right;
+}
+
+.nav, .navShow {
+  float: left;
+  min-height: 629px;
+}
+
+.first {
+  padding: 40px 0;
+}
+.first .f1, .first .f2, .first .f3 {
+  float: left;
+}
+.first .f1 {
+  padding-left: 15px;
+  border-right: 1px solid #eeeeee;
+}
+.first .f1 img {
+  margin-right: 20px;
+}
+.first .f1 section {
+  width: 140px;
+}
+.first .f1 > img, .first .f1 section {
+  float: left;
+  font-size: 14px;
+}
+.first .f1 > img p, .first .f1 section p {
+  padding-top: 25px;
+}
+.first .f1 > img p span, .first .f1 section p span {
+  padding-right: 10px;
+}
+.first .f2 {
+  width: 460px;
+  padding-left: 30px;
+  font-size: 14px;
+  padding-top: 12px;
+  height: 86px;
+  border-right: 1px solid #eeeeee;
+}
+.first .f2 p {
+  padding-top: 13px;
+}
+.first .f2 p img {
+  position: relative;
+  top: 3px;
+}
+.first .f3 {
+  font-size: 14px;
+  padding-left: 46px;
+}
+.first .f3 span {
+  display: inline-block;
+  width: 54px;
+  text-align: center;
+  color: #ff6c00;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.second {
+  width: 100%;
+}
+.second h3 {
+  width: 100%;
+  height: 40px;
+  background: #eeeeee;
+  text-indent: 12px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.second li {
+  padding-left: 10px;
+  font-size: 14px;
+  padding-top: 25px;
+  border-bottom: 1px solid #eeeeee;
+}
+.second li section {
+  padding-bottom: 20px;
+}
+.second li p {
+  font-size: 12px;
+  color: #252a2f;
+  padding-bottom: 20px;
+}
+.second .type {
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 12px;
+  background: #007fff;
+  color: #FFF;
+  border-radius: 3px;
+  margin-right: 15px;
+}
+.second .active {
+  background: #ff9000;
+}
+.second .name {
+  color: #007fff;
+}
+.second .s1Right {
+  float: right;
+  padding-right: 10px;
+}
+.second .s1Right img {
+  padding-right: 10px;
+  position: relative;
+  top: 3px;
+}
+.second .s1Right a {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.third {
+  width: 100%;
+  font-size: 14px;
+}
+.third h3 {
+  width: 100%;
+  height: 40px;
+  background: #eeeeee;
+  text-indent: 12px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.third h3 .switch {
+  font-size: 12px;
+}
+.third h3 .switch a {
+  display: inline-block;
+}
+.third h3 .switch a:nth-of-type(1) {
+  padding-right: 10px;
+}
+.third h3 .switch .active {
+  color: #000000;
+}
+.third dl {
+  border-bottom: 1px solid #eeeeee;
+}
+.third dd, .third dt {
+  float: left;
+}
+.third dt {
+  float: right;
+  padding-top: 20px;
+}
+.third dt a {
+  display: block;
+  width: 68px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.third dt .apply {
+  background: #007fff;
+  color: #FFF;
+  border-radius: 3px;
+}
+.third dd {
+  padding: 15px 0;
+  color: #007fff;
+}
+.third dd p {
+  color: #000000;
+  padding: 15px 0;
+  font-size: 12px;
+}
+.third .company, .third .city, .third .state, .third .pay {
+  padding-right: 20px;
+}
