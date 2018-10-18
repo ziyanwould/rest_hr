@@ -10,6 +10,8 @@
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/pBack.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.min.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+
 
 
 
@@ -59,7 +61,7 @@
 
               <div class="first clearfix"> 
                     <div class="f1">
-                      <img src="./images/pBack/person.png">
+                      <img id="img" src="./images/pBack/person.png">
                       <section>
                           <p><span>何先生</span><img src="./images/pBack/man.png"/></p>
                           <p>2年工作经验</p>
@@ -67,8 +69,8 @@
                     </div>
 
                     <div class="f2">
-                    <p><img src="./images/pBack/pho.png"> <span>18776007488</span> <a href="javascript">修改</a></p>
-                    <p><img src="./images/pBack/b_mail.png"> <span>18776007488@163.com</span> <a href="javascript">修改</a></p>
+                    <p><img src="./images/pBack/pho.png"> <span>18776007488</span> <a id='pho' href="javascript:;">修改</a></p>
+                    <p><img src="./images/pBack/b_mail.png"> <span>18776007488@163.com</span> <a id='email' href="javascript:;">修改</a></p>
                     </div>
 
                     <div class="f3">
@@ -84,7 +86,7 @@
                           <li>
                              <section><span class="type">全职</span> <span class="name">建筑设计类 - 规划书</span>  
                                 <span class="s1Right"> <img src="./images//pBack/shuaxin.png"><a href="javascript:;">刷新</a><img src="./images//pBack/yl.png"><a href="javascript:;">预览</a><img src="./images//pBack/change.png"><a href="javascript:;">修改</a> 
-                                <span class="state">简历状态：<input  name="status" type="checkbox" checked='false' data-size="mini"></span>
+                                <span class="state">简历状态：<img src="./images/pBack/tishi.png"><input  name="status" type="checkbox" checked='false' data-size="mini"></span>
                              </section>
                              <p>更新时间：2017年8月15日 09:33:21</p> 
 
@@ -92,7 +94,7 @@
                         <li>
                                 <section><span class="type active">兼职</span> <span class="name">建筑设计类 - 规划书</span>  
                                    <span class="s1Right"> <img src="./images//pBack/shuaxin.png"><a href="javascript:;">刷新</a><img src="./images//pBack/yl.png"><a href="javascript:;">预览</a><img src="./images//pBack/change.png"><a href="javascript:;">修改</a> 
-                                   <span class="state">简历状态：<input name="status" type="checkbox" checked='false'  data-size="mini"></span>
+                                   <span class="state">简历状态：<img src="./images/pBack/tishi.png"><input name="status" type="checkbox" checked='false'  data-size="mini"></span>
                                 </section>
                                 <p>更新时间：2017年8月15日 09:33:21</p> 
    
@@ -157,8 +159,106 @@
           </div>
        </div>
     </div>
-    <script src="./js/jquery-1.11.1.min.js"></script>
+
+    <!-- 头像裁剪工具 -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script type="text/javascript" src="js/cropbox.js"></script>
+    <div class="jt1 jt" style="display:none">
+        <div class="container">
+            <div class="imageBox">
+              <div class="thumbBox"></div>
+              <div class="spinner" style="display: block">Loading...</div>
+            </div>
+            <div class="action"> 
+              <!-- <input type="file" id="file" style=" width: 200px">-->
+              <div class="new-contentarea tc"> <a href="javascript:void(0)" class="upload-img">
+                <label for="upload-file">选择图像</label>
+                </a>
+                <input type="file" class="" name="upload-file" id="upload-file" />
+              </div>
+              <input type="button" id="btnCrop"  class="Btnsty_peyton" value="裁剪">
+              <input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+"  >
+              <input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" >
+            </div>
+            <div class="cropped">
+                <button type="button" class="btn qx padding2 btn-primary">取消上传头像</button>
+            </div>
+          </div>
+    </div>
+  
+      <script type="text/javascript">
+      $(window).load(function() {
+          var options =
+          {
+              thumbBox: '.thumbBox',
+              spinner: '.spinner',
+              imgSrc: 'images/avatar.png'
+          }
+          var cropper = $('.imageBox').cropbox(options);
+          $('#upload-file').on('change', function(){
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                  options.imgSrc = e.target.result;
+                  cropper = $('.imageBox').cropbox(options);
+              }
+              reader.readAsDataURL(this.files[0]);
+              this.files = [];
+          })
+          var messages = '';
+          $('#btnCrop').on('click', function(){
+              var img = cropper.getDataURL();//需要上传的裁剪的图片
+              messages = img;
+              $('.cropped').html('');
+        
+              $('.cropped').append('<img src="'+img+'" align="absmiddle" style="width:180px;margin-top:4px;border-radius:180px;box-shadow:0px 0px 12px #7E7E7E;"><p>180px*180px</p>');
+              $('.cropped').append('<button type="button" class="btn padding btn-primary">上传该头像</button>')
+              $('.cropped').append('<button type="button" class="btn qx padding3 btn-primary">取消上传头像</button>')
+          })
+          $('#btnZoomIn').on('click', function(){
+              cropper.zoomIn();
+          })
+          $('#btnZoomOut').on('click', function(){
+              cropper.zoomOut();
+          })
+          $('#img').on('click', function(){
+             $('.jt1').show(200)
+          })
+          $(document).on('click','.qx', function(){
+             $('.jt1').hide(200)
+          })
+          $(document).on('click','.padding', function(){
+            $('#img').attr("src",messages);
+             $('.jt1').hide(200)
+          })
+      });
+      </script>
+
+    <!-- 头像裁剪工具 end-->
+
+    <!-- 修改手机号码及修改邮箱等 -->
+    <div class="jt2 jt color2" style="display:none">
+       <div class="detail">
+            <h3>修改手机号码</h3>
+            <h4>修改手机号须先验证原手机</h4>
+            <h5><em>当前手机：</em>18776007488</h5>
+
+            <section class="clearfix"> 
+             <span> <em>*</em>新的手机号</span>  <input type="text" class="form-control phone phones"  placeholder="请输入手机号">
+            </section>
+            <section class="clearfix">
+            <span> <em>*</em>验证码</span>  <input type="text" class="form-control yzm"   placeholder="请输入验证码"><input class="btn btn-default hqyzm" type="button"  value="获取验证码">
+            </section>
+            <section>
+                    <button id="wc" type="button" data-type="phone" class="btn comm btn-default">完成</button> <button id='qx' type="button" class="btn comm  btn-danger">取消</button>
+            </section>
+       </div>
+    </div>
+
+    <!-- 修改手机号码及修改邮箱等 end-->
+
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <script src="./js/bootstrap-switch.min.js"></script>
+    
     <script>
       $(function(){
         //   控制左侧导航
@@ -210,6 +310,93 @@
             
         }
          })
+
+         //控制显示简历公开隐藏介绍
+        $('.state').popover({
+            trigger:'hover',
+            title:"简历情况说明",
+            content: '公开：允许所有通过建筑猎聘网站认证审核的企业查看的简历;保密：不允许任何人员或企业查看你的简历'
+         
+           })
+
+           //倒计时
+           var countdown=60; 
+            $('.hqyzm').click(function(){
+                var obj = $(this);
+                settime(obj);
+            })
+            function settime(obj) { //发送验证码倒计时
+                if (countdown == 0) { 
+                    obj.attr('disabled',false); 
+                    //obj.removeattr("disabled"); 
+                    obj.val("获取验证码");
+                    countdown = 60; 
+                    return;
+                } else { 
+                    obj.attr('disabled',true);
+                    obj.val("重新发送(" + countdown + ")");
+                    countdown--; 
+                } 
+            setTimeout(function() { 
+                settime(obj) }
+                ,1000) 
+            }
+
+
+           //修改手机
+            var phone = $('#pho')
+            phone.click(function(){
+                $('.jt2').show(200)
+            })
+            $('#qx').click(function(){
+                $('.jt2').hide(200)
+            })
+            //第一个输入框
+               var input1 =$('.phones')
+            //第二个输入框
+               var input2 =$('.yzm')
+          
+            $('#wc').click(function(){
+                var that = $(this);
+                var self = $(this).data('type')
+                if(self=='phone'){
+                  var m1 = input1.val();
+                  var m2 = input2.val();
+                  if(m1=='' || m2==''){
+                   that.popover({
+                        placement:'bottom'	,
+                        content: "您尚有未输入项目"
+                    })
+                    that.popover('show')//展示
+                    
+                  }else {
+                    that.popover('destroy')//销毁
+                    smallHint(input2,'bottom','验证码不正确！',500)
+                  }
+                }
+            })
+
+            //组件区
+            function smallHint (sele,place,count,time){
+                sele.tooltip({
+                    title: count,
+                    placement: place,
+                    delay: 400
+                    });
+                    sele.tooltip('show');
+                    if(time){
+                        setTimeout(function(){
+                        sele.tooltip('destroy');
+                      },time)
+                    }else{
+                        setTimeout(function(){
+                        sele.tooltip('destroy');
+                       },2000)
+                    }
+                   
+                }
+
+           
       })
 
     </script>

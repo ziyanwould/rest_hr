@@ -54,6 +54,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -138,6 +142,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .first .f1 img {
   margin-right: 20px;
+  cursor: pointer;
 }
 .first .f1 section {
   width: 140px;
@@ -182,6 +187,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .second {
   width: 100%;
+}
+.second .state {
+  cursor: pointer;
+}
+.second .state img {
+  position: relative;
+  top: -10px !important;
+  left: -5px !important;
 }
 .second h3 {
   width: 100%;
@@ -296,4 +309,122 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .third .company, .third .city, .third .state, .third .pay {
   padding-right: 20px;
+}
+
+.padding {
+  margin-top: 150px;
+}
+
+.padding2 {
+  position: absolute;
+  bottom: 20px;
+  left: 47px;
+}
+
+.padding3 {
+  margin-top: 20px;
+  margin-right: -6px;
+}
+
+.jt {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+}
+
+.container {
+  position: relative;
+  left: -108px;
+}
+
+.cropped {
+  position: relative;
+}
+
+#img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.detail {
+  width: 362px;
+  height: 362px;
+  position: absolute;
+  left: 50%;
+  margin-left: -181px;
+  margin-top: -181px;
+  background: #fff;
+  top: 50%;
+  border-radius: 5px;
+}
+.detail h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 28px;
+}
+.detail h4 {
+  font-size: 12px;
+  color: #797979;
+  text-align: center;
+  padding-top: 35px;
+}
+.detail h5 {
+  font-size: 12px;
+  color: #ff8800;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.detail h5 em {
+  font-weight: 700;
+  color: #000000;
+}
+.detail section {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-size: 12px;
+}
+.detail section span, .detail section input {
+  float: left;
+}
+.detail section span {
+  width: 70px;
+  margin-right: 10px;
+  text-align: right;
+}
+.detail section em, .detail section span {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+}
+.detail section em {
+  color: red;
+}
+.detail section .phone {
+  width: 220px;
+  height: 30px;
+}
+.detail section .yzm {
+  width: 110px;
+  height: 30px;
+  margin-right: 10px;
+}
+.detail section .hqyzm {
+  width: 100px;
+  height: 30px;
+}
+.detail section .btn.comm {
+  margin-top: 20px;
+  width: 138px;
+  height: 38px;
+  margin-left: 10px;
+}
+
+.color2 {
+  background: rgba(0, 0, 0, 0.7) !important;
 }
