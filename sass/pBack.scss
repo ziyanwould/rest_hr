@@ -22,6 +22,7 @@ $font2:16px;
   height: 0px;
   overflow: hidden;
 }
+
 #pcounts{
   padding-top: 20px;
   width: 100%;
@@ -37,7 +38,7 @@ $font2:16px;
   margin: 0 auto;
 }
 .navShow{
-  width: 984px;
+  width: 1044px;
   padding: 20px;
   background: #FFF ;
   height: 100%;
@@ -135,7 +136,7 @@ $font2:16px;
   }
   .f3{
     font-size: $font1;
-    padding-left: 46px;
+    padding-left: 117px;
     span{
       display: inline-block;
       width: 54px;
@@ -299,6 +300,7 @@ $font2:16px;
   background: rgba(255, 255, 255, .9);
   position: fixed;
   top:0;
+  z-index: 1;
 
 }
 .container{
@@ -393,4 +395,16 @@ border-radius: 50px;
 .color2{
   background: rgba(0, 0, 0, 0.7)!important;
   
+}
+.pBalert{
+  width: 1200px;;
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  margin-left: -600px;
+  top:50px;
+ z-index: 10;
+  strong{
+    font-weight: 700;
+  }
 }

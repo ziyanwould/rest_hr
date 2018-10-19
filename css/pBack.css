@@ -81,7 +81,7 @@ a {
 }
 
 .navShow {
-  width: 984px;
+  width: 1044px;
   padding: 20px;
   background: #FFF;
   height: 100%;
@@ -174,7 +174,7 @@ a {
 }
 .first .f3 {
   font-size: 14px;
-  padding-left: 46px;
+  padding-left: 117px;
 }
 .first .f3 span {
   display: inline-block;
@@ -332,6 +332,7 @@ a {
   background: rgba(255, 255, 255, 0.9);
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 .container {
@@ -427,4 +428,17 @@ a {
 
 .color2 {
   background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.pBalert {
+  width: 1200px;
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  margin-left: -600px;
+  top: 50px;
+  z-index: 10;
+}
+.pBalert strong {
+  font-weight: 700;
 }
