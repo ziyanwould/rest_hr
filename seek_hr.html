@@ -55,12 +55,12 @@
             <div class="form-group">
                 <label class="sr-only" >经验</label>
                 <select class="form-control" id="dis1">
-                    <option value="" data-code="">— 工作经验 —</option>
-                    <option value="" data-code="">无经验</option>
-                    <option value="" data-code="">1-3年</option>
-                    <option value="" data-code="">3-5年</option>
-                    <option value="" data-code="">5-10年</option>
-                    <option value="" data-code="">10年以上</option>
+                    <option value="0" data-code="— 工作经验 —">— 工作经验 —</option>
+                    <option value="1" data-code="无经验">无经验</option>
+                    <option value="2" data-code="1-3年">1-3年</option>
+                    <option value="3" data-code="3-5年">3-5年</option>
+                    <option value="4" data-code="5-10年">5-10年</option>
+                    <option value="5" data-code="0年以上">10年以上</option>
                 </select>
             </div>
             <div class="form-group">
@@ -1383,6 +1383,10 @@
 
 
         });
+        // $('#dis1').change(function(){
+        //   var mes = $(this).find("option:selected").data('code');
+        // alert(mes);
+        // })
     });
 
 </script>

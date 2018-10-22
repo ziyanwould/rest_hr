@@ -100,15 +100,19 @@ a {
 .nav {
   width: 156px;
   background: #E7EBEF;
-  padding-left: 30px;
-  padding-right: 20px;
   font-size: 14px;
   font-weight: 700;
 }
 .nav a {
-  display: inline-block;
-  padding-top: 30px;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: #000000;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+.nav a.active {
+  background: #fff;
 }
 .nav dd a {
   font-size: 12px;
@@ -117,6 +121,7 @@ a {
   font-weight: 400;
   display: block;
   padding-left: 10px;
+  text-indent: 30px;
 }
 .nav dt a {
   display: block;
@@ -436,9 +441,83 @@ a {
   position: fixed;
   left: 50%;
   margin-left: -600px;
-  top: 50px;
+  top: 10px;
   z-index: 10;
 }
 .pBalert strong {
   font-weight: 700;
+}
+
+.title.jlCenter {
+  position: relative;
+}
+
+.Fq, .Fj {
+  width: 72px;
+  height: 22px;
+  border-radius: 3px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 14px;
+  display: inline-block;
+  color: #FFF;
+  font-weight: 400;
+  float: right;
+  position: relative;
+  top: -10px;
+}
+
+.Fq {
+  background: #2178FB;
+}
+
+.Fj {
+  background: #FF8021;
+  left: -5px;
+}
+
+.second.jiCenter h3 .active {
+  background: #eeeeee;
+  color: #000000;
+}
+
+.second.jiCenter {
+  margin-top: 30px;
+}
+
+.third.zwCenter {
+  margin-top: 30px;
+}
+.third.zwCenter .inline {
+  display: inline-block;
+}
+.third.zwCenter .zwNav {
+  background: #eeeeee;
+  padding: 20px 10px;
+}
+.third.zwCenter .seek {
+  display: inline-block;
+  width: 300px;
+  position: relative;
+  float: right;
+}
+.third.zwCenter .zwNav a {
+  display: inline-block;
+  width: 68px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.third.zwCenter .zwNav .apply {
+  background: #007fff;
+  color: #FFF;
+  border-radius: 3px;
+}
+.third.zwCenter .delete {
+  color: red;
+}
+.third.zwCenter dl .inline {
+  position: relative;
+  margin: 5px 10px;
+  top: 8px;
 }
