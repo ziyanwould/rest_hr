@@ -246,6 +246,37 @@
                 //  $(this).index()
              })
 
+             //职位收藏的全选及取消
+             $('#allx').click(function(){
+               var pd = $(this).prop("checked");
+              // alert(pd);
+               $('.third.zwCenter dl').find("input[type='checkbox']").prop("checked",pd);
+             })
+             //职位收藏删除
+             $('.zwNav .delete').click(function(){
+                $('.third.zwCenter dl').find("input[type='checkbox']").each(function(){
+                   if($(this).prop("checked")){
+                       $(this).closest('dl').remove();
+                       $('#allx').prop("checked",false);
+                       bigestHint("成功!","已删除您选中的职位","success",2200)
+                   } 
+                })
+             })
+             $('.third.zwCenter dl ').on('click','.delete',function(){
+                $(this).closest('dl').remove();
+
+             })
+             //新闻取消收藏
+           
+             $('.third.newsCenter dl').on('click','.delete',function(){
+                $(this).closest('dl').remove();
+
+             })
+
+             //职位的申请
+             $('.zwNav .apply').click(function(){
+
+             })
             //组件区
             function smallHint (sele,place,count,time){//小提示卡
                 sele.tooltip({

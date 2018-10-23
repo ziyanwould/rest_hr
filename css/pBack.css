@@ -521,3 +521,67 @@ a {
   margin: 5px 10px;
   top: 8px;
 }
+
+.third.newsCenter .zwNav {
+  background: #eeeeee;
+  padding: 10px;
+  margin-top: 30px;
+}
+.third.newsCenter .zwNav .seek {
+  width: 300px;
+  float: right;
+}
+
+.newsCenter dd > img {
+  width: 200px;
+  height: 145px;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+}
+.newsCenter dt {
+  float: right;
+  padding-top: 57px;
+}
+.newsCenter .center {
+  margin-left: 16px;
+}
+.newsCenter .center .name {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 700;
+}
+.newsCenter .center .Ftime, .newsCenter .center .net, .newsCenter .center .autor {
+  margin-right: 20px;
+}
+.newsCenter .center img {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+.newsCenter .count {
+  width: 576px;
+  line-height: 24px;
+  margin-top: 10px;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.newsCenter .delete {
+  color: red;
+}
+
+#pcounts .count {
+  min-width: 400px;
+  margin: 0;
+}
+#pcounts .issue {
+  margin: 0;
+}
+#pcounts .inputShow {
+  max-width: 1004px;
+}

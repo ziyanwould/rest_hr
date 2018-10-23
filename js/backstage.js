@@ -501,7 +501,7 @@ function area_city(you_city,are_city,df) {
             $.ajax({
                 type: "post",        //type：(string)请求方式，POST或GET
                 dataType: "json",    //dataType：(string)预期返回的数据类型。xml,html,json,text等
-                url: "js/citys.json",  //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
+                url: "./js/citys.json",  //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
                 success: function (msg) {
                     var  json = eval(msg.provinces);
                     var strs = "";
@@ -535,7 +535,7 @@ function area_city(you_city,are_city,df) {
         $.ajax({
             type: "post",        //type：(string)请求方式，POST或GET
             dataType: "json",    //dataType：(string)预期返回的数据类型。xml,html,json,text等
-            url: "js/citys.json",  //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
+            url: "./js/citys.json",  //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
             success: function (msg) {
                 var  json = eval(msg.provinces);
                 var strs = "";
@@ -575,7 +575,7 @@ function area_city(you_city,are_city,df) {
     $.ajax({
         type: "post",        //type：(string)请求方式，POST或GET
         dataType: "json",    //dataType：(string)预期返回的数据类型。xml,html,json,text等
-        url: "js/citys.json",  //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
+        url: "./js/citys.json",  //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
         success: function (msg) {
           var  json = eval(msg.provinces);
             var str = "";

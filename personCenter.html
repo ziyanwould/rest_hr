@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>建筑猎聘-新闻收藏</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/pBack.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.min.css">
+    <link href="css/backstage.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <script src="./js/jquery-1.11.1.min.js"></script>
+
+
+    <!-- 引用网上的多行文本框 -->
+    <!--<link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">  备用 -->
+     <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link rel="stylesheet" type="text/css" href="css/build.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+
+<header style="width:100%;height: 109px;overflow:hidden; " >
+    <iframe src="commom_hr/header4.html" width="100%" height="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"  ></iframe>
+</header>
+
+<div id="pcounts" >
+    <div class="pcount clearfix">
+        <div class="nav">
+            <ul>
+                <li><a  href="javascript:;" >我的建筑猎聘</a></li>
+                <li><a  href="javascript:;" >简历中心</a></li>
+
+                <li><dl>
+                    <dt><a  href="javascript:;" >收藏夹 <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" data-show="true"></span></a>   </dt>
+                    <dd><a  href="javascript:;"  >兼职收藏</a></dd>
+                    <dd><a  href="javascript:;" >全职收藏</a></dd>
+                    <dd><a  href="javascript:;" >新闻收藏</a></dd>
+                </dl></li>
+
+
+                <li><dl>
+                    <dt><a  href="javascript:;" >账户管理 <span class=" glyphicon glyphicon-triangle-top" aria-hidden="true" data-show="true"></span></a>   </dt>
+                    <dd><a  href="javascript:;" class="active">修改个人消息</a></dd>
+                    <dd><a  href="javascript:;" >密码修改</a></dd>
+                </dl></li>
+                <li><a href="javascript:;">消息中心</a></li>
+            </ul>
+        </div>
+        <div class="navShow inputShow">
+            <div class="title">
+                <p>修改个人信息</p>
+            </div>
+            <!--发布兼职简历-->
+            <div class="count  val1">
+
+                <div class="issue">
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding">姓名</span>
+                        <span class="i_title ">
+                             <input type="text" class="form-control inputl"  placeholder="" >
+                         </span>
+
+                    </section>
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding">性别</span>
+                        <div class="radio radio-info radio-inline" style="position: relative;top: 12px;">
+                            <input type="radio" value="option1" name="radioInline" checked>
+                            <label for="inlineRadio1">男</label>
+                        </div>
+                        <div class="radio radio-info radio-inline" style="position: relative;top: 12px;">
+                            <input type="radio"  value="option2" name="radioInline">
+                            <label for="inlineRadio2">女</label>
+                        </div>
+
+                    </section>
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding">出生年月日</span>
+
+
+                        <div class="controls input-append date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input size="16" type="text" style="width: 128px;" class="form-control inputl" value="" readonly="">
+                            <span class="add-on"><i class="icon-remove"></i></span>
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+                        <input type="hidden" id="dtp_input2" value=""><br>
+
+
+                    </section>
+
+                    <section class="clearfix">
+                        <input data-val="true" data-val-length="字段 Education 必须是最大长度为 50 的字符串。" data-val-length-max="50" id="Education" name="Education" type="hidden" value="">
+                        <span class="i_title i_padding">最高学历</span>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <em>- 请选择 -</em>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu education" aria-labelledby="dropdownMenu1">
+                                <li><a href="javascript:;">初中及以下</a></li>
+                                <li><a href="javascript:;">高中</a></li>
+                                <li><a href="javascript:;">中技</a></li>
+                                <li><a href="javascript:;">中专</a></li>
+                                <li><a href="javascript:;">大专</a></li>
+                                <li><a href="javascript:;">本科</a></li>
+                                <li><a href="javascript:;">硕士</a></li>
+                                <li><a href="javascript:;">博士</a></li>
+                                <li><a href="javascript:;">MBA</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="clearfix">
+                        <input data-val="true" data-val-length="字段 Education 必须是最大长度为 50 的字符串。" data-val-length-max="50" id="Education" name="Education" type="hidden" value="">
+                        <span class="i_title i_padding">工作年限</span>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <em>- 请选择 -</em>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu education" aria-labelledby="dropdownMenu1">
+                                <li><a href="javascript:;">应届毕业生</a></li>
+                                <li><a href="javascript:;">1年</a></li>
+                                <li><a href="javascript:;">2年</a></li>
+                                <li><a href="javascript:;">3年</a></li>
+                                <li><a href="javascript:;">4年</a></li>
+                                <li><a href="javascript:;">5年</a></li>
+                                <li><a href="javascript:;">6年</a></li>
+                                <li><a href="javascript:;">7年</a></li>
+                                <li><a href="javascript:;">8年</a></li>
+                                <li><a href="javascript:;">9年</a></li>
+                                <li><a href="javascript:;">10年</a></li>
+                                <li><a href="javascript:;">10年以上</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding">所在城市</span>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <em>- 省 -</em>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu area_f" aria-labelledby="dropdownMenu1">
+
+                                <li><a href="#">北京市</a></li>  <li><a href="#">天津市</a></li>  <li><a href="#">河北省</a></li>  <li><a href="#">山西省</a></li>  <li><a href="#">内蒙古</a></li>  <li><a href="#">辽宁省</a></li>  <li><a href="#">吉林省</a></li>  <li><a href="#">黑龙江省</a></li>  <li><a href="#">上海市</a></li>  <li><a href="#">江苏省</a></li>  <li><a href="#">浙江省</a></li>  <li><a href="#">安徽省</a></li>  <li><a href="#">福建省</a></li>  <li><a href="#">江西省</a></li>  <li><a href="#">山东省</a></li>  <li><a href="#">河南省</a></li>  <li><a href="#">湖北省</a></li>  <li><a href="#">湖南省</a></li>  <li><a href="#">广东省</a></li>  <li><a href="#">广西</a></li>  <li><a href="#">海南省</a></li>  <li><a href="#">重庆市</a></li>  <li><a href="#">四川省</a></li>  <li><a href="#">贵州省</a></li>  <li><a href="#">云南省</a></li>  <li><a href="#">西藏</a></li>  <li><a href="#">陕西省</a></li>  <li><a href="#">甘肃省</a></li>  <li><a href="#">青海省</a></li>  <li><a href="#">宁夏</a></li>  <li><a href="#">新疆</a></li>  <li><a href="#">台湾省</a></li>  <li><a href="#">澳门</a></li>  <li><a href="#">香港</a></li></ul>
+                        </div>
+                        <span class="i_title s_padding">-</span>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <em>- 市 -</em>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu area_c" aria-labelledby="dropdownMenu1">
+
+                            </ul>
+                        </div>
+                        <span class="i_title s_padding">-</span>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <em>- 区 -</em>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu area_a" aria-labelledby="dropdownMenu1">
+
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding">社保所在地</span>
+                        <div class="dropdown">
+                            <button class="btn btn_sb btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <em>- 省 -</em>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu area_f" aria-labelledby="dropdownMenu1">
+
+                                <li><a href="#">北京市</a></li>  <li><a href="#">天津市</a></li>  <li><a href="#">河北省</a></li>  <li><a href="#">山西省</a></li>  <li><a href="#">内蒙古</a></li>  <li><a href="#">辽宁省</a></li>  <li><a href="#">吉林省</a></li>  <li><a href="#">黑龙江省</a></li>  <li><a href="#">上海市</a></li>  <li><a href="#">江苏省</a></li>  <li><a href="#">浙江省</a></li>  <li><a href="#">安徽省</a></li>  <li><a href="#">福建省</a></li>  <li><a href="#">江西省</a></li>  <li><a href="#">山东省</a></li>  <li><a href="#">河南省</a></li>  <li><a href="#">湖北省</a></li>  <li><a href="#">湖南省</a></li>  <li><a href="#">广东省</a></li>  <li><a href="#">广西</a></li>  <li><a href="#">海南省</a></li>  <li><a href="#">重庆市</a></li>  <li><a href="#">四川省</a></li>  <li><a href="#">贵州省</a></li>  <li><a href="#">云南省</a></li>  <li><a href="#">西藏</a></li>  <li><a href="#">陕西省</a></li>  <li><a href="#">甘肃省</a></li>  <li><a href="#">青海省</a></li>  <li><a href="#">宁夏</a></li>  <li><a href="#">新疆</a></li>  <li><a href="#">台湾省</a></li>  <li><a href="#">澳门</a></li>  <li><a href="#">香港</a></li></ul>
+                        </div>
+                        <span class="i_title s_padding">-</span>
+                        <div class="dropdown">
+                            <button class="btn btn_sb btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <em>- 市 -</em>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu area_c" aria-labelledby="dropdownMenu1">
+
+                            </ul>
+                        </div>
+                        <span class="i_title" style="font-size:14px;margin-left: 20px; ">
+                             <input type="radio" name="shebao" value="right">
+                            无社保
+                         </span>
+
+                    </section>
+
+
+
+
+
+
+
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding"> &nbsp; </span>
+                        <span class="i_title ">
+                             <button type="button" style="font-size: 16px;margin-right: 15px;" class="btn publish btn-info">发 布</button>
+                             <button type="button" style="font-size: 16px;" class="btn publish btn-default">返 回</button>
+
+                         </span>
+
+
+                    </section>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src='./js/pBack.js'></script>
+<script type="text/javascript" src="js/cropbox.js"></script>
+<script src="./js/bootstrap-switch.min.js"></script>
+<script src="js/bootstrap-magnify.min.js"></script>
+<script src="js/backstage.js"></script>
+<!--时间选择-->
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript">
+    	    function changeState(el) {
+    	        if (el.readOnly) el.checked=el.readOnly=false;
+    	        else if (!el.checked) el.readOnly=el.indeterminate=true;
+    	    }
+</script>
+</body>
+</html>
