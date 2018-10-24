@@ -277,6 +277,24 @@
              $('.zwNav .apply').click(function(){
 
              })
+            //消息的展开与隐藏
+            $('.unfold').click(function () {
+              var  that = $(this);
+              var pd = that.find('em');
+              if (pd.html()=='展开'){
+                 pd.html('收起');
+                 that.find('img').attr("src","images/pBack/folder.png");
+                 that.closest('dl').find('.detailMes').slideDown(300);
+                 that.closest('dl').siblings().find('.detailMes').slideUp(200);
+                 that.closest('dl').siblings().find('em').html('展开');
+                 that.closest('dl').siblings().find('img').attr("src","images/pBack/unfolder.png");
+              }else {
+                  pd.html('展开');
+                  that.find('img').attr("src","images/pBack/unfolder.png");
+                  that.closest('dl').find('.detailMes').slideUp(200);
+
+              }
+            })
             //组件区
             function smallHint (sele,place,count,time){//小提示卡
                 sele.tooltip({

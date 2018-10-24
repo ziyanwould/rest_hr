@@ -558,4 +558,80 @@ border-radius: 50px;
   .inputShow{
     max-width: 1004px;
   }
+  .issue section .i_padding {
+    width: 92px;
+    padding-right: 15px;
+    text-align: right;
+  }
+}
+//infoCenter
+
+.third.zwCenter.infoCenter{
+  margin-top: 15px;
+  dl{
+    position: relative;
+    .type{
+      color: #000000;
+      font-size: 14px;
+      em{
+        font-size: 12px;
+        padding-left: 12px;
+      }
+    }
+    .detailMes{
+      width: 100%;
+     padding-left: 45px;
+      border-top: 1px solid $hui;
+      line-height: 24px;
+      color: #000000;
+    }
+    .unfold{
+      img{
+        display: inline-block;
+        margin-right: 5px;
+        position: relative;
+        top: 2px;
+      }
+    }
+    dt{
+      padding-top: 26px;
+    }
+  }
+}
+.bord{
+  margin-top: 20px;
+  font-size: 12px;
+  a{
+    display: inline-block;
+    padding-bottom: 10px;
+    color: #000000;
+    margin-right: 30px;
+    em{
+      display: inline-block;
+      padding: 5px;
+      background: #E48420;
+      border-radius: 3px;
+      color: #FFFFFF;
+    }
+  }
+  a.active{
+    border-bottom: 1px solid $blue2;
+  }
+}
+
+
+//partTime
+#pcounts{
+  .issue h2 {
+    font-size: 14px;
+    padding-bottom: 14px;
+    color: $blue;
+    border-top: 1px solid $hui;
+    border-bottom: none;
+    font-weight: 400;
+    padding-top: 37px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    text-indent: 10px;
+  }
 }
