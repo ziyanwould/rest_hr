@@ -41,7 +41,7 @@
     <div class="pcount clearfix">
         <div class="nav">
             <ul>
-                <li><a  href="javascript:;" >我的建筑猎聘</a></li>
+                <li><a  href="javascript:;"  class="active" >我的建筑猎聘</a></li>
                 <li><a  href="javascript:;" >简历中心</a></li>
 
                 <li><dl>
@@ -54,7 +54,7 @@
 
                 <li><dl>
                     <dt><a  href="javascript:;" >账户管理 <span class=" glyphicon glyphicon-triangle-top" aria-hidden="true" data-show="true"></span></a>   </dt>
-                    <dd><a  href="javascript:;" class="active">修改个人消息</a></dd>
+                    <dd><a  href="javascript:;" >修改个人消息</a></dd>
                     <dd><a  href="javascript:;" >密码修改</a></dd>
                 </dl></li>
                 <li><a href="javascript:;">消息中心</a></li>
@@ -129,8 +129,9 @@
                                 <em>引用我们目录的</em>
                                 <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <ul class="dropdown-menu BZf" aria-labelledby="dropdownMenu1">
                                 <li><a href="#">- 请选择 -</a></li>
+                                <li><a href="#">一级建造师</a></li>
                                 <li><a href="#">引用我们目录的</a></li>
                             </ul>
 
@@ -147,6 +148,47 @@
                             </ul>
 
                         </div>
+                    </section>
+
+                    <section class="clearfix BZ" style="display:none;">
+                        <span class="i_title i_padding">B证情况</span>
+                        <div class="radio radio-info radio-inline" style="position: relative;top: 12px;">
+                            <input type="radio" value="option1" name="radioInline" checked="">
+                            <label for="inlineRadio1">有B</label>
+                        </div>
+                        <div class="radio radio-info radio-inline" style="position: relative;top: 12px;">
+                            <input type="radio" value="option2" name="radioInline">
+                            <label for="inlineRadio2">无B</label>
+                        </div>
+                        <div class="radio radio-info radio-inline" style="position: relative;top: 12px;">
+                            <input type="radio" value="option2" name="radioInline">
+                            <label for="inlineRadio2">考B</label>
+                        </div>
+
+                    </section>
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding">证书名称</span>
+                        <span class="i_title " style="width: 490px;">
+                             <input type="text" style="width: 463px;" class="form-control inputx" placeholder="">
+                         </span>
+                       
+                    </section>
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding">发证机构</span>
+                        <span class="i_title " style="width: 490px;">
+                             <input type="text" style="width: 463px;" class="form-control inputx" placeholder="">
+                         </span>
+
+                    </section>
+
+                    <section class="clearfix n_count" data-code="block" style="display:block;">
+                        <span class="i_title i_padding n_count">证书有效时间</span> <span class="i_title">
+                        <input class="form-control formDatetime n_count " style="width: 124px" type="text" value="" size="16"> </span>
+                        <span class="i_title s_padding ">-</span>
+                        <span class="i_title">
+                            <input class="form-control formDatetime n_count" title="" data-container="body" data-toggle="popover" style="width: 124px" type="text" value="" size="16" data-original-title="温馨提示"> </span>
                     </section>
 
                     <section class="clearfix">
@@ -216,6 +258,8 @@
                         </div>
                     </section>
 
+                 
+
                     <section class="clearfix">
                         <span class="i_title i_padding"> &nbsp; </span>
                         <span class="i_title ">
@@ -247,15 +291,42 @@
 <script type="text/javascript" src="js/cropbox.js"></script>
 <script src="./js/bootstrap-switch.min.js"></script>
 <script src="js/bootstrap-magnify.min.js"></script>
-<script src="js/backstage.js"></script>
+
 <!--时间选择-->
 <script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script src="js/backstage.js"></script>
 <script type="text/javascript">
-    	    function changeState(el) {
-    	        if (el.readOnly) el.checked=el.readOnly=false;
-    	        else if (!el.checked) el.readOnly=el.indeterminate=true;
-    	    }
+
+        $(function(){
+           $('.formDatetime').datetimepicker({
+                format: 'yyyy-mm',
+                autoclose: true,
+                todayBtn: true,
+                startView: 'year',
+                minView:'year',
+                maxView:'decade',
+                language:  'zh-CN',
+            });
+
+            //移出事件
+            $('#pcounts').find('.radio-inline input').off();
+
+            //B证出现
+            $('.BZf li a').click(function(){
+               if($(this).html()=='一级建造师'){
+                   $('.BZ').show()
+               }else{
+                $('.BZ').hide()
+               }
+            })
+        }) 
+        function changeState(el) {
+            if (el.readOnly) el.checked=el.readOnly=false;
+            else if (!el.checked) el.readOnly=el.indeterminate=true;
+        }
+            
 </script>
 </body>
 </html>

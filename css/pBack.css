@@ -655,3 +655,76 @@ a {
   margin-top: 20px;
   text-indent: 10px;
 }
+
+#pcounts .parent .child:first-child .btnRemove {
+  display: none;
+}
+
+.register {
+  font-size: 14px;
+  width: 500px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -295px;
+  background: #FFFFFF;
+  border-radius: 30px;
+}
+.register div {
+  padding: 0 20px;
+}
+.register h2 {
+  color: #00a0e9;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  font-size: 16px;
+}
+.register .list {
+  margin-bottom: 30px;
+  position: relative;
+}
+.register .list input {
+  height: 50px;
+  border-radius: 15px;
+}
+.register .list span {
+  width: 98px;
+  height: 48px;
+  position: absolute;
+  top: 1px;
+  left: 21px;
+  background: #F8F9FB;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 15px;
+}
+.register .list button {
+  width: 106px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  text-align: center;
+  border-radius: 15px;
+}
+.register input::-webkit-input-placeholder {
+  color: #000000;
+}
+.register .fr input::-webkit-input-placeholder {
+  text-indent: 110px;
+}
+.register .fr input {
+  text-indent: 110px;
+}
+.register .reg p {
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
+.register .other {
+  margin-top: 49px;
+  text-align: center;
+  color: #e3e3e3;
+}

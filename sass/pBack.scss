@@ -635,3 +635,90 @@ border-radius: 50px;
     text-indent: 10px;
   }
 }
+
+//fulltime
+#pcounts{
+  .parent{
+    .child:first-child{
+      .btnRemove{
+        display: none;
+      }
+  }
+  }
+}
+
+//personRegister
+.register{
+  font-size: 14px;
+  width: 500px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -295px;
+  background: #FFFFFF;
+  border-radius: 30px;
+  div{
+    padding: 0 20px;
+  }
+  h2{
+    color: #00a0e9;
+    text-align: center;
+    height:100px ;
+    line-height: 100px;
+    font-size: 16px;
+  }
+
+  .list{
+    margin-bottom: 30px;
+    position: relative;
+    input{
+      height: 50px;
+      border-radius: 15px;
+    }
+    span{
+      width: 98px;
+      height: 48px;
+      position:absolute;
+      top: 1px;
+      left:21px;
+      background: #F8F9FB;
+      text-align: center;
+      line-height: 48px;
+      border-radius: 15px;
+    }
+    button{
+      width:106px ;
+      height: 40px;
+      position:absolute;
+      top: 5px;
+      right:25px;
+      text-align: center;
+  
+      border-radius: 15px;
+    }
+  }
+  input::-webkit-input-placeholder {
+      color:#000000;
+  }
+  .fr{
+    input::-webkit-input-placeholder {
+    text-indent: 110px;
+  }
+  input{
+    text-indent: 110px;
+  }
+  }
+  .reg{
+    p{
+      margin: 40px 0 20px 0;
+      text-align: center;
+    }
+  }
+  .other{
+    margin-top: 49px;
+    text-align: center;
+    color: #e3e3e3;
+  }
+}

@@ -80,11 +80,11 @@
                     <section class="clearfix">
                         <span class="i_title i_padding">性别</span>
                         <div class="radio radio-info radio-inline" style="position: relative;top: 12px;">
-                            <input type="radio" value="option1" name="radioInline" checked>
+                            <input type="radio" value="option1" name="radioInline" data-checked='true' checked>
                             <label for="inlineRadio1">男</label>
                         </div>
                         <div class="radio radio-info radio-inline" style="position: relative;top: 12px;">
-                            <input type="radio"  value="option2" name="radioInline">
+                            <input type="radio"  value="option2" data-checked='true' name="radioInline">
                             <label for="inlineRadio2">女</label>
                         </div>
 
@@ -224,7 +224,7 @@
                             </ul>
                         </div>
 
-                        <div class="radio radio-info radio-inline" style="position: relative;top: 12px;left: 15px;">
+                        <div class="radio radio-info radio-inline shebao" style="position: relative;top: 12px;left: 15px;">
                             <input type="radio"  value="option2" name="radioInline2">
                             <label for="inlineRadio2"> 无社保</label>
                         </div>
@@ -271,6 +271,10 @@
 <script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script type="text/javascript">
+
+            $(function(){
+               
+            })
     	    function changeState(el) {
     	        if (el.readOnly) el.checked=el.readOnly=false;
     	        else if (!el.checked) el.readOnly=el.indeterminate=true;
