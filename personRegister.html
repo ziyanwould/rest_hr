@@ -10,8 +10,9 @@
     <link href="./css/pBack.css" type="text/css" rel="stylesheet">
     <script src="./js/jquery-1.11.1.min.js"></script>
     <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="./js/bootstrap-switch.min.js"></script>
+    <script type="text/javascript" src="js/cropbox.js"></script>
     <script src='./js/pBack.js'></script>
-    
  
 
 
@@ -32,7 +33,8 @@ body{
    position: relative;
 }
 </style>
-        
+   
+   
 <header style="width:100%;height: 109px;overflow:hidden;background: #FFFFFF; " >
     <iframe src="commom_hr/header3.html" width="100%" height="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"  ></iframe>
 </header>
@@ -43,7 +45,7 @@ body{
           <div class="list fr">
                 <input type="text" class="form-control"  placeholder="手机号">
                 <span>中国 +86 v</span>
-                <button type="button" class="btn ">获取验证码</button>
+                <input type="button" class="btn hqyzms" value="获取验证码"/>
           </div>
           <div class="list">
                 <input type="text" class="form-control" placeholder="输入4位短信验证码">
@@ -59,12 +61,74 @@ body{
           </div>
           <div class="reg">
              <p>点击确定代表您已同意 <a href="javascript:;">《网站服务条款》</a>、 <a href="javascript:;">《网站隐私政策》</a></p>
-             <button type="button" class="btn btn-primary btn-lg btn-block">注册</button>
+             <button type="button" id="Regis" class="btn btn-primary btn-lg btn-block">注册</button>
           </div>
           <div class="other">
-           已经账号？<a href="javascript:;">点此登录</a>
+           已经账号？<a href="pBack.html">点此登录</a>
           </div>
       </div>
+
+      <script>
+      $(function(){
+           
+        if(GetRequest('forget').forget){
+            $('.child h2'). html("重置密码") ;
+            $('.child').find('.list').eq(2).find("input:first").attr('placeholder',"请输入新密码");
+            $('.child').find('.list').eq(3).find("input:first").attr('placeholder',"确认新密码");
+            $('#Regis').html('重置')
+        }
+
+       $('.hqyzms').click(function(){
+             var that  = $(this);
+           var  input1 = $('.child').find('.list').eq(0).find("input:first");
+         if(isPoneAvailable(input1)) {
+            settime(that); 
+         }else{
+            bigestHint("警告","您的手机号格式不正确",'danger',3000);
+           
+         }
+          
+       })
+
+       $('#Regis').click(function(){
+            var regx =/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/;
+            var  input1 = $('.child').find('.list').eq(0).find("input:first");
+            var  input2 = $('.child').find('.list').eq(1).find("input:first");
+            var  input3 = $('.child').find('.list').eq(2).find("input:first");
+            var  input4 = $('.child').find('.list').eq(3).find("input:first");
+            // console.log (input1.val(),input2.val(),input3.val(),input4.val())
+            // alert(regx.test(input3.val()))
+            if(!isPoneAvailable(input1)){
+                  bigestHint("警告！","您的手机号格式不正确",'danger',3000);
+            }else if(input2.val()!=6666){
+                  bigestHint("警告！","短信验证码不正确",'danger',3000);
+            }else if(!regx.test(input3.val())){
+                  bigestHint("警告！","密码应该为6位以上数字与字母混合",'danger',3000);
+            }else if(input4.val()!=input3.val()){
+                  bigestHint("警告！","您两次密码输入不一致",'danger',3000);
+            }else{
+                  bigestHint("成功！","注册成功，正在跳转......",'success',3000);
+            }
+           
+       })
+
+
+
+      })
+      function GetRequest() {  
+            var url = location.search; //获取url中"?"符后的字串  
+            var theRequest = new Object();  
+            if (url.indexOf("?") != -1) {  
+                  var str = url.substr(1);  
+                  strs = str.split("&");  
+                  for(var i = 0; i < strs.length; i ++) {  
+                  theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+                  }  
+            }  
+            return theRequest;  
+}  
+      
+      </script>
 </div>
 </body>
 </html>

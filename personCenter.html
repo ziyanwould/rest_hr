@@ -41,25 +41,25 @@
     <div class="pcount clearfix">
         <div class="nav">
             <ul>
-                <li><a  href="javascript:;" >我的建筑猎聘</a></li>
-                <li><a  href="javascript:;" >简历中心</a></li>
+                <li><a  href="pBack.html">我的建筑猎聘</a></li>
+                <li><a  href="jlCenter.html" >简历中心</a></li>
 
                 <li><dl>
                     <dt><a  href="javascript:;" >收藏夹 <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" data-show="true"></span></a>   </dt>
-                    <dd><a  href="javascript:;"  >兼职收藏</a></dd>
-                    <dd><a  href="javascript:;" >全职收藏</a></dd>
-                    <dd><a  href="javascript:;" >新闻收藏</a></dd>
+                    <dd><a  href="zwCenter.html">兼职收藏</a></dd>
+                    <dd><a  href="zwCenter1.html"  >全职收藏</a></dd>
+                    <dd><a  href="newsCenter.html" >新闻收藏</a></dd>
                 </dl></li>
 
-
+               
                 <li><dl>
-                    <dt><a  href="javascript:;" >账户管理 <span class=" glyphicon glyphicon-triangle-top" aria-hidden="true" data-show="true"></span></a>   </dt>
-                    <dd><a  href="javascript:;" class="active">修改个人消息</a></dd>
-                    <dd><a  href="javascript:;" >密码修改</a></dd>
-                </dl></li>
-                <li><a href="javascript:;">消息中心</a></li>
+                        <dt><a  href="javascript:;" >账户管理 <span class=" glyphicon glyphicon-triangle-top" aria-hidden="true" data-show="true"></span></a>   </dt>
+                        <dd><a  href="personCenter.html"  class="active">修改个人消息</a></dd>
+                        <dd><a  href="changePd.html" >密码修改</a></dd>
+                    </dl></li>
+                <li><a href="infoCenter.html">消息中心</a></li>
             </ul>
-        </div>
+          </div>
         <div class="navShow inputShow">
             <div class="title">
                 <p>修改个人信息</p>
@@ -241,8 +241,8 @@
                     <section class="clearfix">
                         <span class="i_title i_padding"> &nbsp; </span>
                         <span class="i_title ">
-                             <button type="button" style="font-size: 16px;margin-right: 15px;background:#1998E3" class="btn publish btn-info">发 布</button>
-                             <button type="button" style="font-size: 16px;" class="btn publish btn-default">返 回</button>
+                             <button type="button" style="font-size: 16px;margin-right: 15px;background:#1998E3" class="btn publishs btn-info">发 布</button>
+                             <button type="button" style="font-size: 16px;" class="btn publishs btn-default">返 回</button>
 
                          </span>
 
@@ -262,18 +262,48 @@
 </div>
 <script src="./js/jquery-1.11.1.min.js"></script>
 <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-<script src='./js/pBack.js'></script>
 <script type="text/javascript" src="js/cropbox.js"></script>
 <script src="./js/bootstrap-switch.min.js"></script>
 <script src="js/bootstrap-magnify.min.js"></script>
-<script src="js/backstage.js"></script>
+
 <!--时间选择-->
 <script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script src="js/backstage.js"></script>
+<script src='./js/pBack.js'></script>
 <script type="text/javascript">
 
             $(function(){
-               
+               $('.publishs').click(function(){
+                
+                   var par = $('.issue');
+                   par.find('section').each(function(index){
+                 
+                    var that = $(this);
+                      var ems =that.find('.dropdown').find('em').html();
+                      var reg = RegExp(/-/);
+                    
+                       if((that.find('input').val())==''){
+                        smallHint (that.find('input'),'top',"请输入",3000)
+                      
+                        
+                       }else if( reg.test(ems)){
+                        smallHint (that.find('.dropdown'),'left',"请选择",3000)
+                     
+                      
+                       }else if( ems==undefined){
+                        smallHint (that.find('.dropdown'),'left',"请选择",3000)
+                 
+                      
+                       }else{
+                        bigestHint("成功！","注册成功，正在跳转......",'success',3000);  
+                       }
+                      console.log(index,ems)
+                      
+                   })
+
+               })
             })
     	    function changeState(el) {
     	        if (el.readOnly) el.checked=el.readOnly=false;

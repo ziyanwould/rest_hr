@@ -651,12 +651,12 @@ border-radius: 50px;
 .register{
   font-size: 14px;
   width: 500px;
-  height: 700px;
+  height: 500px;
   position: absolute;
   left: 50%;
   top: 50%;
   margin-left: -250px;
-  margin-top: -295px;
+  margin-top: -195px;
   background: #FFFFFF;
   border-radius: 30px;
   div{
@@ -665,13 +665,14 @@ border-radius: 50px;
   h2{
     color: #00a0e9;
     text-align: center;
-    height:100px ;
-    line-height: 100px;
+    height: 50px;
+    line-height: 50px;
     font-size: 16px;
+  
   }
 
   .list{
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     position: relative;
     input{
       height: 50px;
@@ -688,14 +689,14 @@ border-radius: 50px;
       line-height: 48px;
       border-radius: 15px;
     }
-    button{
+    button,.hqyzms{
       width:106px ;
       height: 40px;
       position:absolute;
       top: 5px;
       right:25px;
       text-align: center;
-  
+      text-indent:0;
       border-radius: 15px;
     }
   }
@@ -717,8 +718,41 @@ border-radius: 50px;
     }
   }
   .other{
+    margin-top: 29px;
+    text-align: center;
+    color: #e3e3e3;
+  }
+ 
+}
+
+@media screen and (min-width: 1441px) {
+  .register{
+    font-size: 14px;
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -295px;
+    background: #FFFFFF;
+    border-radius: 30px;
+  }
+  .other{
     margin-top: 49px;
     text-align: center;
     color: #e3e3e3;
   }
+  .register .list {
+    margin-bottom: 30px;
+    position: relative;
+    
+}
+.register h2 {
+  color: #00a0e9;
+  text-align: center;
+  height:100px ;
+  line-height: 100px;
+  font-size: 16px;
+}
 }
