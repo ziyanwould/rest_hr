@@ -601,7 +601,7 @@ a {
   color: #000000;
   font-size: 14px;
 }
-.third.zwCenter.infoCenter dl .type em {
+.third.zwCenter.infoCenter dl .type em, .third.zwCenter.infoCenter dl .type .time {
   font-size: 12px;
   padding-left: 12px;
 }
