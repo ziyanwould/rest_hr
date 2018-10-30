@@ -1,0 +1,100 @@
+html, body, .all {
+  width: 100%;
+  height: 100%;
+  font-family: "Microsoft YaHei";
+}
+
+a {
+  text-decoration: none;
+}
+
+.flexslider {
+  margin: 0px auto 13.75px;
+  position: relative;
+  width: 100%;
+  height: 405px;
+  overflow: hidden;
+  zoom: 1;
+}
+
+
+
+.h_first {
+  width: 1200px;
+  margin: 0 auto;
+  height: 109px;
+}
+
+.f_right {
+  float: right;
+}
+
+.f_left {
+  margin-top: 20px;
+}
+.f_left span {
+  display: block;
+  font-size: 12px;
+  color: #333;
+  margin-top: 22px;
+  line-height: 25px;
+  margin-left: 12px;
+}
+.f_left img, .f_left span {
+  float: left;
+}
+.f_left em {
+  color: #3ebee6;
+}
+
+.f_right {
+  margin-top: 21px;
+}
+.f_right .soso {
+  display: inline-block;
+  width: 70px;
+  margin: 0 21px;
+  color: #000;
+  text-align: center;
+  line-height: 37px;
+}
+.f_right .active {
+  color: red;
+  border-bottom: 1px solid red;
+}
+.f_right img {
+  display: inline-block;
+  margin-left: 97px;
+  position: relative;
+  top: 5px;
+}
+.f_right .lo {
+  color: #333;
+  margin: 0 8px;
+}
+
+.h_third {
+  width: 1200px;
+  margin: 0 auto;
+}
+.h_third ul {
+  padding-top: 16px;
+  padding-bottom: 34px;
+}
+.h_third li a span {
+  display: block;
+  color: #666666;
+  font-size: 14px;
+  margin-top: 20px;
+  line-height: 22px;
+  margin-right: 37px;
+}
+.h_third li a img, .h_third li a span {
+  float: left;
+}
+.f_right .soso:hover {
+  color: red;
+  border-bottom: 1px solid red;
+  transition: all .3s ease-in;
+}
+
