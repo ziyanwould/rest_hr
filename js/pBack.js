@@ -225,8 +225,8 @@
                 // 
             });
             // 简历中心-全职兼职切换
-             $('.second.jiCenter a').click(function(){
-               $('.second.jiCenter a').addClass('active');
+             $('.second.jiCenter h3 a').click(function(){
+               $('.second.jiCenter h3 a').addClass('active');
                $(this).removeClass('active');
                 //  $(this).index()
              })

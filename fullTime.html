@@ -517,6 +517,13 @@
 
             //新增项目与移出
             $('#pcounts').on('click','.btnAdd',function(){
+                $('.formDatetime').each(function(index,ele){
+                   $(this).datetimepicker('remove');
+                });
+                $("[data-toggle='popover']").each(function(index,ele){
+                  
+                    $(this).popover('destroy');
+                })
                 var that = $(this);
                 var par =that.closest('.child');
                 var child = par.clone(true);
@@ -540,8 +547,31 @@
                 });
                 child.hide();
                 par.after(child);
-                child.slideDown(500)
-
+                child.slideDown(500,function(){
+                    $('.formDatetime').each(function(index,ele){
+                     $(this).datetimepicker({
+                        format: 'yyyy-mm',
+                        autoclose: true,
+                        todayBtn: true,
+                        startView: 'year',
+                        minView:'year',
+                        maxView:'decade',
+                        language:  'zh-CN',
+                    });
+                    $("[data-toggle='popover']").each(function(index,ele){
+               
+                     $(this).popover({
+                        trigger  : "focus",                                                                                                  //如果设为focus 当按钮失去焦点提示层会消失，例如页面空白处单机提示层消失
+                        placement: "top",
+                        html     : true,
+                        content  : '<p style="width: 500px;">如果您的时间持续到现在，请选择：<a href="javascript:;" onclick="obclicks()">至今</a></p><p></p>'
+                    });
+                   })
+                })
+                });
+             
+              
+               
             })
             $('#pcounts').on('click','.btnRemove',function(){
                 var that = $(this);
