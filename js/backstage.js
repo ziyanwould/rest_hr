@@ -4,14 +4,300 @@
 var numbers   = 0;
 var countdown = 60;
 var self      = $(this);
+
+/*
+    del_type = 1，删除权限组;
+    del_type = 2，删除用户;
+    del_type = 3，删除新闻
+    del_type = 4，删除简历
+    del_type = 5，删除职位
+    del_type = 6，分配简历
+    del_type = 7，分配职位
+    del_type = 8，分配注册
+    del_type = 9，审核简历
+    del_type = 10，审核职位
+    del_type = 11，审核注册
+    del_type = 12, 删除简历的二级表：工作经验、项目经验、教育经历、证书列表
+    del_type = 13，分配认证
+    del_type = 14，分配企业
+ */
+function del_func(del_type) {
+    if (del_type == 1) {
+        del_qx_func();
+    } else if (del_type == 2) {
+        del_user_func();
+    }
+    else if (del_type == 3) {
+        del_news_func();
+    }
+    else if (del_type == 4) {
+        del_resume_func();
+    }
+    else if (del_type == 5) {
+        del_position_func();
+    } else if (del_type == 6) {
+        fenpei_resume_func();
+    } else if (del_type == 7) {
+        fenpei_position_func();
+    } else if (del_type == 13) {
+        fenpei_ident_func();
+    }
+    else if (del_type == 14) {
+        fenpei_comp_func();
+    }
+}
+
+function del_qx_func() {
+    $.ajax({
+        url     : "/Account/DeleteQxGroup",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val() },
+        success : function (data) {
+            $("#del_id").val("0");
+            if (data.result != 1) {
+                alert(data.msg);
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！")
+        }
+    })
+}
+
+function del_user_func() {
+    $.ajax({
+        url     : "/Account/DeleteMenber",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val() },
+        success : function (data) {
+            $("#del_id").val("0");
+            if (data.result != 1) {
+                alert(data.msg);
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！")
+        }
+    })
+}
+
+function del_news_func() {
+    $.ajax({
+        url     : "/Data/DeleteNews",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val() },
+        success : function (data) {
+            $("#del_id").val("0");
+            if (data.result != 1) {
+                alert(data.msg);
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！")
+        }
+    })
+}
+
+function del_resume_func() {
+    $.ajax({
+        url     : "/Data/DeleteResume",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val() },
+        success : function (data) {
+            $("#del_id").val("0");
+            if (data.result != 1) {
+                alert(data.msg);
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
+function del_position_func() {
+    $.ajax({
+        url     : "/Data/DeletePosition",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val() },
+        success : function (data) {
+            $("#del_id").val("0");
+            if (data.result != 1) {
+                alert(data.msg);
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
+function fenpei_resume_func() {
+    $.ajax({
+        url     : "/Allot/FenPeiResume2",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val(), name: $("#select_user").val() },
+        success : function (data) {
+            if (data.result != 1) {
+                alert(data.msg);
+            } else {
+                window.location.href = window.location.href;
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
+function fenpei_position_func() {
+    $.ajax({
+        url     : "/Allot/FenPeiPosition2",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val(), name: $("#select_user").val() },
+        success : function (data) {
+            if (data.result != 1) {
+                alert(data.msg);
+            } else {
+                window.location.href = window.location.href;
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
+function fenpei_ident_func() {
+    $.ajax({
+        url     : "/Allot/FenPeiIdent2",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val(), name: $("#select_user").val() },
+        success : function (data) {
+            if (data.result != 1) {
+                alert(data.msg);
+            } else {
+                window.location.href = window.location.href;
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
+function fenpei_comp_func() {
+    $.ajax({
+        url     : "/Allot/FenPeiCompany2",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val(), name: $("#select_user").val() },
+        success : function (data) {
+            if (data.result != 1) {
+                alert(data.msg);
+            } else {
+                window.location.href = window.location.href;
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
+function audit_resume_func(status) {
+    $.ajax({
+        url     : "/Audit/AuditResume",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val(), status: status },
+        success : function (data) {
+            if (data.result != 1) {
+                alert(data.msg);
+            } else {
+                window.location.href = window.location.href;
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
+function audit_ident_func(status) {
+    $.ajax({
+        url     : "/Audit/AuditIdent",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val(), status: status },
+        success : function (data) {
+            if (data.result != 1) {
+                alert(data.msg);
+            } else {
+                window.location.href = window.location.href;
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
+function audit_comp_func(status) {
+    $.ajax({
+        url     : "/Audit/AuditComp",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val(), status: status },
+        success : function (data) {
+            if (data.result != 1) {
+                alert(data.msg);
+            } else {
+                window.location.href = window.location.href;
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
+function audit_position_func(status) {
+    $.ajax({
+        url     : "/Audit/AuditPosition",
+        type    : "post",
+        dataType: "json",
+        data    : { id: $("#del_id").val(), status: status },
+        success : function (data) {
+            if (data.result != 1) {
+                alert(data.msg);
+            } else {
+                window.location.href = window.location.href;
+            }
+        },
+        error: function () {
+            alert("网络错误，请稍后再试！");
+        }
+    })
+}
+
 $(function () {
+    
 
     click_s();
     click_dh();
     click_top();
     click_delete();
     area_city();
-    click_judge();
+    //click_judge();
     click_radio();
     click_remve();
     bind_input();
@@ -23,7 +309,7 @@ $(function () {
     push_phone();
     qx_setting();
     zy_setting();
-
+    tip_remark();
 
 
     $("[data-toggle='tooltip']").tooltip();/*启动提示*/
@@ -60,10 +346,6 @@ $(function () {
         language : 'zh-CN',
     });
 
-
-
-
-
     /*/情况说明/*/
     $('.exp a').click(function () {
         var m_null = "";
@@ -72,73 +354,9 @@ $(function () {
 
     });
 
-
     $(document).on("click",".pic a",function(){
         $(".pic").remove();
     });
-
-    $('.table a').click(function () {
-
-        var count  = $(this).attr("data-val");
-        var counts = $(this).attr("data-slide");
-        var c_src  = $(this).attr("data-page");
-        var pic    = $('.c_src');
-
-
-        if(counts){
-            var cs_length = counts.length;
-        }
-        if(count){
-            var c_length = count.length;
-        }
-
-
-
-        if( c_length>300){
-
-            $('.exp_count p').html(count);
-            $('.exp_count h3').html("职位说明");
-            $('.explain').addClass('active').show();
-        }else  if( cs_length>2){
-                reg   = new RegExp("；","g");                                       //定义正则表达式
-            var c1    = count.replace(reg,"；<br/>");                               /*遇到“；”进行换行*/
-            var c2    = counts.replace(reg,"；<br/>");                              /*遇到“；”进行换行*/
-                $val1 = $('<p>岗位职责：</p><p>'+c1+'</p>');
-                $val2 = $('<p style="margin-top: 25px;">任职资格：</p><p>'+c2+'</p>');
-            $(".exp_count >p").append($val1).append($val2);
-            $('.exp_count h3').html("职位说明");
-            $('.explain').addClass('active').show();
-
-
-        }
-        else {
-            if(count){
-
-                $('.exp_count p').html(count);
-                $('.exp_count h3').html("情况说明");
-                $('.explain').removeClass('active').show();
-            }
-            else if(c_src) {
-                var xcy= $('<div class="pic">'
-                    +'<div class="picture">'
-                    +'<h2><a href="javascript:;"><span class=" glyphicon glyphicon-remove" aria-hidden="true"></span></a> </h2>'
-                    + '<img src="'+c_src+'" data-toggle="magnify">'
-                    + '</div>'
-                    + '</div>');
-                $("body").append(xcy);
-
-                /*重新执行*/
-                $('[data-toggle="magnify"]').each(function () {
-                    var $mag = $(this);
-                    $mag.magnify()
-                })
-            }
-
-        }
-
-
-    });
-
 
     /*一级菜单点击切换*/
     $('.com_left li').click(function () {
@@ -149,9 +367,6 @@ $(function () {
         $('.zhulie').children().eq(xu_n).show();
         $('.c_t ').children().eq(xu_ns).show().siblings().hide();
         numbers = xu_ns;
-
-
-
     });
 
     /*/二级菜单点击切换*/
@@ -211,12 +426,15 @@ $(function () {
             far.find('tbody').find('.btn-primary').each(function () {
                 if($(this).attr("disabled")=="disabled" )
                 {
-                    $(this).closest('tr').prepend($('  <td> <input type="checkbox" disabled="disabled" ></td>'))
+                    $(this).closest('tr').prepend($('  <td> <input type="checkbox" name="ids" disabled="disabled" ></td>'))
                 }else {
-                    $(this).closest('tr').prepend($('  <td> <input type="checkbox"  ></td>'))
+                    $(this).closest('tr').prepend($('  <td> <input type="checkbox" name="ids"  ></td>'))
                 }
             })
-//                  far.find('tbody').children().prepend($('  <td> <input type="checkbox" ></td>'))
+
+            $("tbody tr td").find("input[type=checkbox]").each(function () {
+                $(this).val($(this).parents("tr").attr("data-id"));
+            })
 
         }else {
             self.html("选择");
@@ -251,13 +469,13 @@ $(function () {
     });
     /*审核待审核等操作*/
     $('.btn-success').click(function () {
+        $("#del_id").val($(this).attr("data-id"));
         var arr          = [];
         arr['title']     = '审核操作';
         arr['count']     = '请对当前选中的信息进行审核操作。';
         arr['btn_left']  = '审核不通过';
         arr['btn_right'] = '审核通过';
-//         arr['se_arr']=["请选择......","胡宇","苏兆明","曹福莉","鲁肃","刘备","张飞","关羽"];
-        var _this = $(this);
+        var _this        = $(this);
         x_remove(_this);
         chang_info(arr);
 
@@ -274,35 +492,58 @@ $(function () {
 
         if( self==="确定" || self==="取消"){
 
-
-
-
             if(gdp==="“审核通过”" && self==="确定"){
                 x_remove().closest('tr').remove();
                 setTimeout(function () {
-                    alert_x("成功！您对信息完成审核通过操作。请在“已审核”列表查看！","alert-success",3000)
-                },500)
-            }else if(gdp==="“审核通过”" && self==="取消"){
+                    alert_x("成功！您对信息完成审核通过操作。请在“已审核”列表查看！", "alert-success", 3000)
+                }, 500);
+
+                if ($("#del_type").val() == 9) {
+                    audit_resume_func(1);
+                } else if ($("#del_type").val() == 10) {
+                    audit_position_func(1);
+                } else if ($("#del_type").val() == 11) {
+                    audit_ident_func(1);
+                } else if ($("#del_type").val() == 15) {
+                    audit_comp_func(1);
+                }
+                
+            } else if (gdp === "“审核通过”" && self === "取消") {
+                $("#del_id").val(0)
                 setTimeout(function () {
                     alert_x("失败！您撤销对信息完成审核通过操作。","alert-danger",3000)
                 },500)
             }else  if(gdp==="“审核不通过”" && self==="确定"){
                 x_remove().closest('tr').remove();
                 setTimeout(function () {
-                    alert_x("成功！您对信息完成审核不通过操作。请在“已审核”列表查看！","alert-info",3000)
-                },500)
-            }else if(gdp==="“审核不通过”" && self==="取消"){
+                    alert_x("成功！您对信息完成审核不通过操作。请在“已审核”列表查看！", "alert-info", 3000)
+                }, 500);
+
+                if ($("#del_type").val() == 9) {
+                    audit_resume_func(0);
+                } else if ($("#del_type").val() == 10) {
+                    audit_position_func(0);
+                } else if ($("#del_type").val() == 11) {
+                    audit_ident_func(0);
+                } else if ($("#del_type").val() == 15) {
+                    audit_comp_func(0);
+                }
+            } else if (gdp === "“审核不通过”" && self === "取消") {
+                $("#del_id").val(0)
                 setTimeout(function () {
                     alert_x("失败！您撤销对信息完成审核不通过操作。","alert-warning",3000)
                 },500)
             }
 
             /*对删除进行操作*/
-            else if(gdp==="“删除”" && self==="取消"){
+            else if (gdp === "“删除”" && self === "取消") {
+                $("#del_id").val("0");
                 setTimeout(function () {
                     alert_x("失败！您撤销对信息“删除”操作。","alert-warning",3000)
                 },500)
-            }else if(gdp==="“删除”" && self==="确定"){
+            } else if (gdp === "“删除”" && self === "确定") {
+                del_func($("#del_type").val())
+                /*删除对应消息*/
                 x_remove().closest('tr').remove();
                 setTimeout(function () {
                     alert_x("成功！您对信息完成“删除”操作","alert-success",3000)
@@ -310,15 +551,23 @@ $(function () {
             }
 
             /*分配*/
-            else if(selct && self==="取消"){
+            else if (selct && self === "取消") {
+                $("#del_id").val("0");
                 setTimeout(function () {
                     alert_x("失败！您取消分配操作。","alert-warning",3000)
                 },500)
-            }else if(selct.val()==="请选择......" && self==="确定"){
+            } else if (selct.val() === "请选择......" && self === "确定") {
                 setTimeout(function () {
                     alert_x("失败！您未分配人员，请重新操作！","alert-danger",3000)
                 },500)
-            }else if(selct.val()!=="请选择......" && self==="确定"){
+            } else if (selct.val() !== "请选择......" && self === "确定") {
+                if ($("#select_func").val() == 1) {
+                    $("#real_name").val($("#select_user").val());
+                    $("#mainForm").submit();
+                }
+                else {
+                    del_func($("#del_type").val())
+                }
                 setTimeout(function () {
                     x_remove().closest('tr').children('td').eq(0).children('input').attr("disabled","disabled").prop("checked",false);
                     x_remove().closest('tr').children('td:last').html('<button type="button" class="btn btn-sm btn-primary" disabled="disabled">已分配：'+selct.val()+'</button>');
@@ -345,24 +594,20 @@ $(function () {
 
         }
 
-
-
-
-
     })
 
     /*分配操作*/
-    $('tbody .btn-primary').click(function () {
-        var arr          = [];
-        arr['title']     = '分配操作';
-        arr['count']     = '当前选中的信息分配给以下人员进行审核。';
-        arr['btn_left']  = '取消';
-        arr['btn_right'] = '确定';
-        arr['se_arr']    = ["请选择......","胡宇","苏兆明","曹福莉","鲁肃","刘备","张飞","关羽"];
-        var _this        = $(this);
-        x_remove(_this);
-        chang_info(arr);
-    })
+    //$('tbody .btn-primary').click(function () {
+    //    var arr = [];
+    //    arr['title'] = '分配操作';
+    //    arr['count'] = '当前选中的信息分配给以下人员进行审核。';
+    //    arr['btn_left'] = '取消';
+    //    arr['btn_right'] = '确定';
+    //    arr['se_arr']=["请选择......","胡宇","苏兆明","曹福莉","鲁肃","刘备","张飞","关羽"];
+    //    var _this = $(this);
+    //    x_remove(_this);
+    //    chang_info(arr);
+    //})
 
 });
 
@@ -375,11 +620,18 @@ function chang_info(arrs) {
     $('.modal-dialog .btn-default').html(arrs['btn_left']);
     $('.modal-dialog .btn-primary').html(arrs['btn_right']);
     if(arrs['se_arr']){
-
-        var sel = $('<select></select>');
-        for (var i = 0; i <arrs['se_arr'].length; i++) {
-            sel.append('<option value="'+arrs['se_arr'][i]+'">'+arrs['se_arr'][i]+'</option>')
-        }
+        var sel = $('<select id="select_user"></select>');
+        sel.append('<option value="' + arrs['se_arr'][0] + '">' + arrs['se_arr'][0] + '</option>')
+        $.ajax({
+            url     : "/Allot/GetUsers",
+            type    : "post",
+            dataType: "json",
+            success : function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    sel.append('<option value="' + data[i] + '">' + data[i] + '</option>')
+                }
+            }
+        })
     }
     xco.append(sel);
 
@@ -402,7 +654,7 @@ function bli() {
 }
 
 function alert_x(a_count,a_class,time) {
-    bli().prepend('<div class="alert '+a_class+'  alert-dismissable">'
+    $('.c_t').prepend('<div class="alert '+a_class+'  alert-dismissable">'
         + '<button type="button" class="close" data-dismiss="alert"'
         +'aria-hidden="true">'
         +  '&times;'
@@ -462,27 +714,37 @@ function click_dh() {
 }
 /**/
 function click_top() {
-    $('.isTop').click(function () {
-        var pd = $(this).html();
-        if(pd ==="置顶"){
-            $(this).html("取消置顶").addClass('active')
-        }else {
-            $(this).html("置顶").removeClass('active')
-        }
+    var pd = $(this).html();
 
+    $('.isTop').click(function () {
+        $.ajax({
+            url     : "/Data/SetTopNews",
+            type    : "post",
+            dataType: "json",
+            data    : { id: $(this).attr("data-id") },
+            success : function (data) {
+                if (data.result == 1) {
+                    if (pd === "置顶") {
+                        $(this).html("取消置顶").addClass('active')
+                    } else {
+                        $(this).html("置顶").removeClass('active')
+                    }
+                }
+            }
+        })      
     })
 }
 
 /**/
 function click_delete() {
-    $('.isMove').click(function () {
+    $(document).on("click", ".isMove", function () {
+        $("#del_id").val($(this).attr("data-id"));
         var arr          = [];
         arr['title']     = '确认操作';
         arr['count']     = '确实要对当前选中的信息进行  <a href="javascript:;" style="color: red">“删除”</a> 的操作？';
         arr['btn_left']  = '取消';
         arr['btn_right'] = '确定';
-//           arr['se_arr']=["请选择......","胡宇","苏兆明","曹福莉","鲁肃","刘备","张飞","关羽"];
-        var _this = $(this);
+        var _this        = $(this);
         x_remove(_this);
         chang_info(arr);
     })
@@ -493,182 +755,156 @@ function click_delete() {
  */
 function area_city(you_city,are_city,df) {
 
-
     if(you_city){
         if(df){
 
-        }else {
-            $.ajax({
-                type    : "post",              //type：(string)请求方式，POST或GET
-                dataType: "json",              //dataType：(string)预期返回的数据类型。xml,html,json,text等
-                url     : "./js/citys.json",   //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
-                success : function (msg) {
-                    var json = eval(msg.provinces);
-                    var strs = "";
+        } else {
+            $.getJSON("/js/citys.json", function (msg) {
+                var json = eval(msg.provinces);
+                var strs = "";
+                for (i in json) {
 
-
-                    for (i in  json) {
-
-                        if (json[i].name==you_city){
-                            var jsons = json[i].city;
-                            for (j in  jsons) {
-                                strs += '  <li><a href="#">'+jsons[j].name+'</a></li>';
-
-                            }
+                    if (json[i].name == you_city) {
+                        var jsons = json[i].city;
+                        for (j in jsons) {
+                            strs += '  <li><a href="javascript:;">' + jsons[j].name + '</a></li>';
                         }
-
                     }
-
-
-                    x_remove().closest('section').find(".area_c").html("").append(strs);
-                    x_remove().closest('section').children('.dropdown').eq(1).find('em').html(" - 市 -");
-
-
-
                 }
+                x_remove().closest('section').find(".area_c").html("").append(strs);
+                x_remove().closest('section').children('.dropdown').eq(1).find('em').html(" - 市 -");
+
+                if (you_city == "不限")
+                    x_remove().closest('section').children('.dropdown').eq(1).find('em').html("不限");
             });
         }
 
     }
-     if(are_city){
+    if (are_city) {
+        $.getJSON("/js/citys.json", function (msg) {
+            var json = eval(msg.provinces);
+            var strs = "";
+            for (i in json) {
 
-        $.ajax({
-            type    : "post",              //type：(string)请求方式，POST或GET
-            dataType: "json",              //dataType：(string)预期返回的数据类型。xml,html,json,text等
-            url     : "./js/citys.json",   //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
-            success : function (msg) {
-                var json = eval(msg.provinces);
-                var strs = "";
+                if (json[i].name == you_city) {
 
-
-                for (i in  json) {
-
-                    if (json[i].name==you_city){
-
-                        var jsons = json[i].city;
-                        for (j in  jsons) {
-
-                        if(jsons[j].name==are_city){
+                    var jsons = json[i].city;
+                    for (j in jsons) {
+                        if (jsons[j].name == are_city) {
                             var jsona = jsons[j].area;
 
-                            for( h in jsona){
+                            for (h in jsona) {
                                 console.log(jsona[h]);
-                                 strs += '  <li><a href="#">'+jsona[h]+'</a></li>';
+                                strs += '  <li><a href="javascript:;">' + jsona[h] + '</a></li>';
                             }
-
-                        }
-
                         }
                     }
-
                 }
-
-
-                x_remove().closest('section').find(".area_a").html("").append(strs);
-                x_remove().closest('section').children('.dropdown').eq(2).find('em').html(" - 区 -");
-                return false;
-
-
             }
+            x_remove().closest('section').find(".area_a").html("").append(strs);
+            x_remove().closest('section').children('.dropdown').eq(2).find('em').html(" - 区 -");
+            return false;
         });
     }
-    $.ajax({
-        type    : "post",              //type：(string)请求方式，POST或GET
-        dataType: "json",              //dataType：(string)预期返回的数据类型。xml,html,json,text等
-        url     : "./js/citys.json",   //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
-        success : function (msg) {
-          var json = eval(msg.provinces);
-          var str  = "";
-
-
-               for (i in  json) {
-                   str += '  <li><a href="#">'+json[i].name+'</a></li>'
-
-               }
-
-            $(".area_f").append(str);
-
-        }
-    });
-
+     $.getJSON("/js/citys.json", function (data) {
+         var json = eval(data.provinces);
+         var str  = "";
+         for (i in json) {
+             str += '  <li><a href="javascript:;">' + json[i].name + '</a></li>'
+         }
+         $(".area_f").append(str);
+         $(".drop_pro").children().first("li").remove();
+     })
 }
 
 /*发布管理发布判断函数*/
 
-function click_judge() {
-    $('.publish').click(function () {
-        /*设一个值*/
+function click_judges(that) {
+    
 
-        var self = true;
-        var par  = $(this).closest('.issue').find('section');
+    /*设一个值*/
 
+    var self = true;
+    var par  = that.closest('.issue').find('section');
 
+    /*判断是否必选项*/
+    par.each(function (i) {
+        //console.log("初始"+self);
+        var _this = $(this);
+        var val   = _this.find('input[type="radio"]').prop('checked');
+        var sele  = _this.find('.dropdown').length;
+        console.log('checked', val)
+        // console.log("val值："+val)
+        if (_this.find('.i_title').find('em').length > 0) {
+            /*判断是否存在空值，或者下拉没选*/
 
-       /*判断是否必选项*/
-        par.each(function(){
-             //console.log("初始"+self);
-            var _this = $(this);
-            var val   = _this.find('input[type="radio"]').prop('checked');
-           // console.log("val值："+val)
-           if(_this.find('.i_title').find('em').length>0){
-               /*判断是否存在空值，或者下拉没选*/
-
-               if ( _this.find('input[type="text"]').val()==""){
-                   //console.log("text:"+self);
-                   self = false;
-
-                  // return false;/*结束本次循环 return false; 终止所有循环*/
-
-
-               }
-               else if(_this.find('.form-control').val()==""){
-                   //console.log(_this.html());
-
-                   self = false;
-                   //console.log("textarea变化后:"+self);
-                 //  return false;/*结束所有循环*/
-
-               }
-
-               else {
-                   /*判断是否存下拉与否 与 单选二存在一*/
-                   console.log(val);
-                   if(!val){
-                       _this.find('.dropdown').each(function () {
-                           var xval = $(this).find('.btn').find('em').html();
-                           console.log(xval);
-                           console.log("索引值"+xval.indexOf("-"));
-                           if(xval.indexOf("-")==0 || xval.indexOf("-")==1){
-
-                               self = false;
-                           }
-                           console.log("最终："+ self)
-                       });
-                   }else {
-                        return;
-                   }
-
-                   }
+            if (_this.find('input[type="text"]').val() == "") {
+                //console.log("text:"+self);
+                self = false;
 
 
+                // return false;/*结束本次循环 return false; 终止所有循环*/
+            }
+            else if (_this.find('input[type="number"]').val() == "") {
 
-               // console.log(""+_this.find(".i_title").eq(0).html()+"<br/>"+self+"");
-               // console.log('<br/>');
-               }
+                if (val) {
 
-           });
-
-       /*得出页面是否能提交*/
-       setTimeout(function () {
-           if(self){
-               alert_x("成功！您成功发布了简历","alert-success",3000)
-           }else {
-               alert_x("失败！您的表单有未填项，请检查后重新提交！","alert-danger",3000)
-           }
-       },200)
+                } else {
+                    self = false;
+                }
 
 
-    })
+            }
+            else if (_this.find('.form-control').val() == "") {
+                //console.log(_this.html());
+
+                self = false;
+                //console.log("textarea变化后:"+self);
+                //  return false;/*结束所有循环*/
+            }
+
+            else if (sele > 0) {
+                /*判断是否存下拉与否 与 单选二存在一*/
+                console.log("有下拉框的", val, sele);
+                if (val) {
+                } else if (_this.is(":hidden")) {
+
+
+                } else {
+                    _this.find('.dropdown').each(function () {
+                        var xval = $(this).find('.btn').find('em').html();
+                        console.log(i, xval);
+                        var reg = RegExp(/-/);
+                        var pdf = reg.test(xval)
+                        console.log("存在值", pdf);
+                        if (pdf) {
+                            self = false;
+                        }
+                        console.log("下拉：" + self)
+                    });
+                }
+
+
+
+
+            }
+            // console.log(""+_this.find(".i_title").eq(0).html()+"<br/>"+self+"");
+            // console.log('<br/>');
+        }
+        console.log("最终end：" + self)
+
+    });
+
+    /*得出页面是否能提交*/
+    setTimeout(function () {
+        if (self) {
+            alert_x("成功！您成功发布了简历", "alert-success", 3000)
+        } else {
+            alert_x("失败！您的表单有未填项，请检查后重新提交！", "alert-danger", 3000)
+        }
+    }, 200)
+
+    return self;
 }
 
 /*单选按钮的可点击与社保的联动*/
@@ -687,23 +923,15 @@ function click_radio() {
             var shebao = _this.closest('section').find('.i_title').html();
             console.log(shebao.indexOf("社保")+shebao);
             if(shebao.indexOf("社保所在地")==0){
-                _this.closest('section').children('.dropdown').eq(0).find('em').html(" - 省 -");
-                _this.closest('section').children('.dropdown').eq(1).find('em').html(" - 市 -");
+                _this.closest('section').children('.dropdown').eq(0).find('em').html("不限");
+                _this.closest('section').children('.dropdown').eq(1).find('em').html("不限");
             }
             if(shebao.indexOf("招聘人数")==0){
                 _this.closest('section').find('input').val("");
 
             }
-
-
-
         }
     });
-
-
-
-
-
 }
 
 /*清空内容*/
@@ -775,8 +1003,6 @@ function click_clone() {
             });
             child.find('.remove_add').tooltip();
             par.prepend(child);
-
-
         }
     })
 }
@@ -784,10 +1010,41 @@ function click_clone() {
 //子版块自己删除
 function child_remove() {
 
-    $(".issue").on("click",".remove_add",function () {
+    $(".issue").on("click", ".remove_add", function () {
+        if (parseInt($("#del_type").val()) == 12) {
+            var arrX = [];
+            arrX.push($("#ID").val());
+            arrX.push($(this).attr("data-id"));
+            arrX.push($(this).parents("hgroup").index());
+
+            if ($(this).parents("hgroup").parent().hasClass("experience")) {
+                arrX.push("工作");
+            } else if ($(this).parents("hgroup").parent().hasClass("project")) {
+                arrX.push("项目");
+            } else if ($(this).parents("hgroup").parent().hasClass("education")) {
+                arrX.push("教育");
+            } else if ($(this).parents("hgroup").parent().hasClass("certificate")) {
+                arrX.push("证书");
+            }
+
+            arrX.push("删除")
+
+            $.ajax({
+                url     : "/Issue/DeleteResumeData",
+                type    : "post",
+                dataType: "json",
+                data    : { arr: arrX },
+                success : function (data) {
+
+                },
+                error: function () {
+
+                }
+            })
+        }
+
         $(this).closest('hgroup').remove();
         $(".btn_add").popover('destroy');
-
     })
 
 }
@@ -796,14 +1053,9 @@ function child_remove() {
 function click_num() {
 
     $('.hr_numx').focus(function () {
-
-
         var _this = $(this);
-
         _this.closest('section').find('input[type="radio"]').removeAttr('checked');
     })
-
-
 }
 
 //50字符处理
@@ -818,8 +1070,6 @@ function text_change() {
            _this.val(_this.val().substring(0, 50))
        }
    })
-
-
 }
 
 /*手机验证码、
@@ -856,29 +1106,22 @@ function click_pass() {
     $('#btn_pss').click(function () {
         var fdc = true;
 
-        var pass   = "zhongzhu71";  //初始密码
-        var pass_n = 111111;        //手机验证码
-
         var old_pass      = $('#oldpass');
         var new_pass      = $('#newpass');
         var new_passAgain = $('#newpassAgain');
         var new_num       = $('#pass_num');
         if(old_pass.val()==""){
-            small_show(old_pass,"请你输入登入密码");
+            small_show(old_pass,"请你输入旧密码");
             fdc = false;
-        }else if(old_pass.val()!= pass){
-            small_show(old_pass,"请你输入登入密码不正确！")
-            fdc = false;
-        };
-
+        }
 
         if(new_pass.val()==""){
-            small_show(new_pass,"请你输入新登入密码");
+            small_show(new_pass,"请你输入新密码");
             fdc = false;
         }else if(!(/^[A-Z][A-z0-9]*$/).test(new_pass.val())){
             small_show(new_pass,"请首字母大写");
             fdc = false;
-        }else if((/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$/).test(new_pass.val())){
+        } else if ((/^[A-Z][a-zA-Z0-9_]{7,19}$/).test(new_pass.val())){
             small_show(new_pass,"密码格式不正确");
             fdc = false;
         }
@@ -894,9 +1137,6 @@ function click_pass() {
         if(new_num.val()==""){
             small_show(new_num,"请输入验证码");
             fdc = false;
-        }else if(pass_n!=new_num.val()){
-            small_show(new_num,"验证码输入错误");
-            fdc = false;
         }
 
        if(fdc){
@@ -906,14 +1146,7 @@ function click_pass() {
            $(this).closest('.issue').find('header').eq(0).hide();
        }
 
-
-
-
     });
-
-
-
-
 
 }
 
@@ -978,11 +1211,6 @@ function push_phone() {
             default: 
 
         }
-
-
-
-
-
         
     });
     function small_p1(self) {
@@ -995,8 +1223,6 @@ function push_phone() {
           dh.find('em,i').eq(3).addClass('active');
           dh.find('em,i').eq(2).addClass('active');
          self.html("提 交");
-
-
     }
     
     function small_over(self) {
@@ -1016,8 +1242,6 @@ function push_phone() {
         '</div>');
         par.eq(0).empty().html(conut);
         par.eq(1).remove();
-
-
     }
 }
 
@@ -1046,7 +1270,7 @@ function qx_setting() {
         x_remove($(this));
         $('.rm1 input[type="text"]').val("");
         $('.rm1 input[type="checkbox"]').prop("checked", false);
-        $('.rm1 tr:nth-last-child(2)').find('input[type="checkbox"]').prop("checked", "checked");
+        //$('.rm1 tr:nth-last-child(2)').find('input[type="checkbox"]').prop("checked", "checked");
     });
     /*新增/修改权限*/
     $('.btn_yes').click(function () {
@@ -1084,7 +1308,7 @@ function qx_setting() {
              ' <td>'+count+' </td>' +
              ' <td>'+this_time+'</td> ' +
              '<td> <button type="button" class="btn btn-warning qx_chang btn-sm">修改</button> ' +
-             '<button type="button" class="btn btn-danger btn-sm">删除</button> </td></tr>');
+             '<button type="button" class="btn btn-danger isMove btn-sm">删除</button> </td></tr>');
          if (myTitle=="新增权限"){
              x_remove().closest('.count').find('tbody').append(nes_tr);
              $('.RManagement').hide();
@@ -1096,42 +1320,40 @@ function qx_setting() {
              $('.RManagement').hide();
              $('.RManagement .rm1').hide();
          }
-
-
-
       }
     })
 
     /*修改权限*/
    /*确保有空格间隔*/
-    $(document).on("click",".qx_chang",function(){
-
+    $(document).on("click", ".qx_chang", function () {
+        $("#qx_id").val($(this).attr("data-id"));     
         $('.rm1 input[type="checkbox"]').prop("checked", false);
         var _this = $(this);
         x_remove(_this);
         var par = $('.rm1')
         par.find('h2').find('span').html("修改权限");
-
+        
         $('.RManagement').show();
         par.show();
         var x_this = _this.closest('tr');
         var title  = x_this.children('td').eq(0).html();
         par.find('input[type="text"]').val(title);
-        var val_count = x_this.children('td').eq(1).html();
+        var val_count = $(this).parent().parent().attr("data-id-arr");
+        var arr       = val_count.split(',');
 
         par.find('input[type="checkbox"]').each(function () {
+            var id = $(this).attr("value");
 
-            var nts = $(this).closest('tr').children('td:last').html();
-
-            if ( val_count.indexOf(''+nts+'')>1){
-                $(this).prop("checked", "checked")
-
-            }
-
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == id) {
+                    $(this).prop("checked", "checked");
+                    break;
+                }
+                else {
+                    $(this).prop("checked", false);
+                }
+            }      
         })
-
-
-
     })
     
 }
@@ -1139,20 +1361,18 @@ function qx_setting() {
 /*成员管理*/
 
 function zy_setting() {
-
-
-  $('.add_compass').click(function () {
-      $('.RManagement').show();
-      $('.rm2').show();
-      x_remove($(this));
-      $('.rm2').find('input').val("");
-      $('.rm2').children().eq(4).find('.dropdown-toggle').find("em").html("- 请选择 -");
-  });
-
+    $('.add_compass').click(function () {
+        $('.RManagement').show();
+        $('.rm2').show();
+        x_remove($(this));
+        $('.rm2').find('input').val("");
+        $('.rm2').children().eq(4).find('.dropdown-toggle').find("em").html("-请选择-");
+    });
     $('.cp_no').click(function () {
         $('.RManagement').hide();
         $('.rm2').hide();
         $('.rm3').hide();
+        $("#add_user_id").val("0");
     });
     $('.cp_yes').click(function () {
 
@@ -1160,8 +1380,6 @@ function zy_setting() {
       var par   = _this.closest('.setting');
       var title = par.find("h2").find('span').html();
       if (title=="添加成员"){
-
-
           var name       = par.children().eq(1).find('input').val();
           var name_area  = par.children().eq(1).find('input');
           var phone      = par.children().eq(2).find('input').val();
@@ -1181,21 +1399,17 @@ function zy_setting() {
           var this_time = (year+'-'+month+'-'+day+'- '+hour+':'+minute+':'+second);
 
           /*手机格式化*/
-
-
           if(( /^1[3,5,8]\d{9}$/).test(phone)){
               var reg     = /^(\d{3})(\d{4})(\d{4})$/;
               var matches = reg.exec(phone);
               var phoneS  = matches[1] + '-' + matches[2] + '-' + matches[3];
           }
-
-
           var countS = $('<tr> <td>'+name+'</td> ' +
               '<td>'+phoneS+'</td>' +
               '<td>'+zoo+' </td> ' +
               '<td>'+this_time+'</td> ' +
               '<td> <button type="button" class="btn btn-warning copss_chang btn-sm">修改</button> ' +
-              '<button type="button" class="btn btn-danger btn-sm">删除</button> </td> </tr>');
+              '<button type="button" class="btn btn-danger isMove btn-sm">删除</button> </td> </tr>');
 
             if(name==""){
                 small_show(name_area,"请输入姓名");
@@ -1209,7 +1423,6 @@ function zy_setting() {
 
             }
 
-
           else if(pass==""){
               small_show(pass_area,"请你输入密码");
 
@@ -1220,7 +1433,7 @@ function zy_setting() {
               small_show(pass_area,"密码格式不正确");
 
           }
-          else if(zoo=="- 请选择 -"){
+          else if(zoo=="-请选择-"){
               small_show(zoo_area,"请选择权限");
               setTimeout(function () {
                   zoo_area.popover('destroy');
@@ -1233,6 +1446,189 @@ function zy_setting() {
              x_remove().closest('.setting').hide()
           }
 
+      }else {
+
+          var name       = par.children().eq(1).find('input').val();
+          var name_area  = par.children().eq(1).find('input');
+          var phone      = par.children().eq(2).find('input').val();
+          var phone_area = par.children().eq(2).find('input');
+          var ifchange   = par.children().eq(3).find('a').html();
+          var pass       = par.children().eq(4).find('input').val();
+          var pass_area  = par.children().eq(4).find('input');
+          var zoo        = par.children().eq(5).find('.dropdown-toggle').find("em").html();
+          var zoo_area   = par.children().eq(5).find('.dropdown-toggle').find("em");
+
+          var date      = new Date();
+          var year      = date.getFullYear();
+          var month     = date.getMonth()+1;
+          var day       = date.getDate();
+          var hour      = date.getHours();
+          var minute    = date.getMinutes();
+          var second    = date.getSeconds();
+          var this_time = (year+'-'+month+'-'+day+'- '+hour+':'+minute+':'+second);
+
+          /*手机格式化*/
+
+
+          if(( /^1[3,5,8]\d{9}$/).test(phone)){
+              var reg     = /^(\d{3})(\d{4})(\d{4})$/;
+              var matches = reg.exec(phone);
+              var phoneS  = matches[1] + '-' + matches[2] + '-' + matches[3];
+          }
+          // var countS = $('<tr> <td>'+name+'</td> ' +
+          //     '<td>'+phoneS+'</td>' +
+          //     '<td>'+zoo+' </td> ' +
+          //     '<td>'+this_time+'</td> ' +
+          //     '<td> <button type="button" class="btn btn-warning copss_chang btn-sm">修改</button> ' +
+          //     '<button type="button" class="btn btn-danger btn-sm">删除</button> </td> </tr>');
+
+          if(name==""){
+              small_show(name_area,"请输入姓名");
+
+          }
+          else if(phone==""){
+              small_show(phone_area,"请输入手机号");
+
+          }else if(!( /^1[3,5,8]\d{9}$/).test(phone)){
+              small_show(phone_area,"手机格式不正确");
+
+          }
+          else if(ifchange==="取消修改密码"){
+               if(pass==""){
+                      small_show(pass_area,"请你输入密码");
+
+
+                  }else if(!(/^[A-Z][A-z0-9]*$/).test(pass) ){
+                      small_show(pass_area,"请首字母大写");
+
+                  }else if((/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$/).test(pass) ){
+                      small_show(pass_area,"密码格式不正确");
+
+                  } else if(zoo=="-请选择-"){
+                   small_show(zoo_area,"请选择权限");
+                   setTimeout(function () {
+                       zoo_area.popover('destroy');
+                   },2000)
+
+               }else{
+                   succeeful()
+               }
+
+          }
+
+          else if(zoo=="-请选择-"){
+              small_show(zoo_area,"请选择权限");
+              setTimeout(function () {
+                  zoo_area.popover('destroy');
+              },2000)
+
+          }else{
+              succeeful()
+          }
+
+          function succeeful() {
+             var par = x_remove().closest('tr');
+             par.children().eq(0).html(name);
+              par.children().eq(1).html(phoneS);
+               par.children().eq(2).html(zoo);
+               par.children().eq(3).html(this_time);
+                  $('.RManagement').hide();
+                  $('.RManagement .rm3').hide();
+          }
+
       }
+    });
+
+    $('#chang_pass').click(function () {
+       var childs = $('#chang_pas');
+       var df     = $(this).html();
+       if (df == "修改密码") {
+           $("#change_pwd").val(1)
+            $(this).html('取消修改密码');
+            childs.show();
+       } else {
+           $("#change_pwd").val(0)
+            $(this).html('修改密码');
+            childs.hide();
+         }
+    })
+    $(document).on("click", ".copss_chang", function () {
+        $("#add_user_id").val($(this).attr("data-id"));
+        
+        var par   = $(this).closest('tr');
+        var name  = par.children().eq(0).html();
+        var phone = par.children().eq(1).html();
+        /*字符串处理*/
+        var reg    = new RegExp("-","g");
+        var iphone = phone.replace(reg,"");
+
+        var qx_setting = par.children().eq(2).html();
+        var oldpass    = "";
+        var Rm3        = $('.rm3');
+         Rm3.children().eq(1).find('input').val(name);
+        Rm3.children().eq(2).find('input').val(iphone);
+        Rm3.children().eq(4).find('input').val("");
+        Rm3.children().eq(5).find('.dropdown-toggle').find('em').html(qx_setting);
+        $('.RManagement').show();
+         Rm3.show();
+        x_remove($(this));
+    })
+
+}
+
+/*查看情况说明的委托*/
+function tip_remark() {
+    $(".table tr td").delegate("a", "click", function () {
+        var count  = $(this).attr("data-val");
+        var counts = $(this).attr("data-slide");
+        var c_src  = $(this).attr("data-page");
+        var pic    = $('.c_src');
+
+        if (counts) {
+            var cs_length = counts.length;
+        }
+        if (count) {
+            var c_length = count.length;
+        }
+
+        if (c_length > 300) {
+
+            $('.exp_count p').html(count);
+            $('.exp_count h3').html("职位说明");
+            $('.explain').addClass('active').show();
+        } else if (cs_length > 2) {
+                reg   = new RegExp("；", "g");                                          //定义正则表达式
+            var c1    = count.replace(reg, "；<br/>");                                  /*遇到“；”进行换行*/
+            var c2    = counts.replace(reg, "；<br/>");                                 /*遇到“；”进行换行*/
+                $val1 = $('<p>岗位职责：</p><p>' + c1 + '</p>');
+                $val2 = $('<p style="margin-top: 25px;">任职资格：</p><p>' + c2 + '</p>');
+            $(".exp_count >p").append($val1).append($val2);
+            $('.exp_count h3').html("职位说明");
+            $('.explain').addClass('active').show();
+        }
+        else {
+            if (count) {
+
+                $('.exp_count p').html(count);
+                $('.exp_count h3').html("情况说明");
+                $('.explain').removeClass('active').show();
+            }
+            else if (c_src) {
+                var xcy = $('<div class="pic">'
+                    + '<div class="picture">'
+                    + '<h2><a href="javascript:;"><span class=" glyphicon glyphicon-remove" aria-hidden="true"></span></a> </h2>'
+                    + '<img src="' + c_src + '" data-toggle="magnify">'
+                    + '</div>'
+                    + '</div>');
+                $("body").append(xcy);
+
+                /*重新执行*/
+                $('[data-toggle="magnify"]').each(function () {
+                    var $mag = $(this);
+                    $mag.magnify()
+                })
+            }
+
+        }
     })
 }

@@ -6,8 +6,8 @@
         //   控制左侧导航
         
         $('.nav').find('dt').click(function(){
-            var self = $(this)
-            var appid = self.find('span').data("show"); 
+            var self  = $(this)
+            var appid = self.find('span').data("show");
         if(appid==true){
             self.find('span').removeClass("glyphicon-triangle-top").addClass("glyphicon-triangle-bottom");
             self.find('span').data("show",false);
@@ -20,26 +20,26 @@
           
         }) 
         //图片头像裁剪
-        var options =
+        var options = 
         {
             thumbBox: '.thumbBox',
-            spinner: '.spinner',
-            imgSrc: '../images/avatar.png'
+            spinner : '.spinner',
+            imgSrc  : '../images/avatar.png'
         }
         var cropper = $('.imageBox').cropbox(options);
         $('#upload-file').on('change', function(){
-            var reader = new FileReader();
-            reader.onload = function(e) {
+            var reader        = new FileReader();
+                reader.onload = function(e) {
                 options.imgSrc = e.target.result;
-                cropper = $('.imageBox').cropbox(options);
+                cropper        = $('.imageBox').cropbox(options);
             }
             reader.readAsDataURL(this.files[0]);
             this.files = [];
         })
         var messages = '';
         $('#btnCrop').on('click', function(){
-            var img = cropper.getDataURL();//需要上传的裁剪的图片
-            messages = img;
+            var img      = cropper.getDataURL();  //需要上传的裁剪的图片
+                messages = img;
             $('.cropped').html('');
       
             $('.cropped').append('<img src="'+img+'" align="absmiddle" style="width:180px;margin-top:4px;border-radius:180px;box-shadow:0px 0px 12px #7E7E7E;"><p>180px*180px</p>');
@@ -67,12 +67,12 @@
         //开关
          
         $('[name="status"]').bootstrapSwitch({
-                onText:"公开",
-                offText:"保密",
+                onText : "公开",
+                offText: "保密",
                 // onColor:"success",
                 // offColor:"info",
-                size:"small",
-                onSwitchChange:function(event,state){
+                size          : "small",
+                onSwitchChange: function(event,state){
                     console.log(state)
                     if(state==true){
                        // $(this).val("1");
@@ -94,8 +94,8 @@
 
         //全职兼职切换
          $('.switch').find('a').click(function(){
-           var self = $(this);
-           var appid = self.data("show"); 
+           var self  = $(this);
+           var appid = self.data("show");
            if(appid==true){
             self.removeClass("active").siblings().addClass("active");
             self.data("show",false).siblings.data("show",true);
@@ -109,8 +109,8 @@
 
          //控制显示简历公开隐藏介绍
         $('.state').popover({
-            trigger:'hover',
-            title:"简历情况说明",
+            trigger: 'hover',
+            title  : "简历情况说明",
             content: '公开：允许所有通过建筑猎聘网站认证审核的企业查看的简历;保密：不允许任何人员或企业查看你的简历'
          
            })
@@ -149,15 +149,15 @@
                
             })
             //第一个输入框
-               var input1 =$('.phones')//手机
+               var input1 = $('.phones')  //手机
             //第二个输入框
-               var input2 =$('.yzm')//验证码
+               var input2 = $('.yzm')  //验证码
      
             $('#wc').click(function(){
                 var that = $(this);
                 var self = $(this).data('type')
-                    var m1 = input1.val();
-                    var m2 = input2.val();
+                var m1   = input1.val();
+                var m2   = input2.val();
                     //当弹出框为修改手机号码
                     if(self=='phone'){
                    
@@ -182,8 +182,8 @@
                     //当弹出框为修改email
                     var Einput1 = $('.jt3').find('.phone');
                     var Einput2 = $('.jt3').find('.yzm');
-                    var e1 = Einput1.val();
-                    var e2 = Einput2.val();
+                    var e1      = Einput1.val();
+                    var e2      = Einput2.val();
                     console.log(e1,e2)
 
                      if(!checkEmail(e1)){
@@ -211,13 +211,13 @@
                  
                  switch(pf)
                     {
-                    case 'refresh':
+                    case 'refresh': 
                     bigestHint("成功!","您简历刷新成功。","success",2200)
                     break;
-                    case 'apply':
+                    case 'apply': 
                     bigestHint("警告!","您网络好像出现问题。","warning",2200)
                     break;
-                    default:
+                    default: 
                     bigestHint("失败!","您简历收藏失败！","danger",2200)
                     }
                 
@@ -264,8 +264,8 @@
              })
             //消息的展开与隐藏
             $('.unfold').click(function () {
-              var  that = $(this);
-              var pd = that.find('em');
+              var that = $(this);
+              var pd   = that.find('em');
               if (pd.html()=='展开'){
                  pd.html('收起');
                  that.find('img').attr("src","images/pBack/folder.png");
@@ -286,9 +286,9 @@
        //组件区
        function smallHint (sele,place,count,time){//小提示卡
         sele.tooltip({
-            title: count,
+            title    : count,
             placement: place,
-            delay: 400
+            delay    : 400
             });
             sele.tooltip('show');
             if(time){
@@ -305,8 +305,8 @@
 
     function bigerHint(sele,place,count,time){//中提示卡
         sele.popover({
-                placement:place	,
-                content: count
+                placement: place,
+                content  : count
             })
             sele.popover('show')//展示
             
@@ -339,7 +339,7 @@
 
     //手机格式是否正确           
     function isPoneAvailable($poneInput) {
-        var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+        var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
         if (!myreg.test($poneInput.val())) {
             return false;
         } else {
@@ -365,7 +365,7 @@
      //对修改手机号改造为修改邮箱
      function useEmail(self){
         var parent = $('.jt2');
-        var copy = parent.clone(true);
+        var copy   = parent.clone(true);
          if(self){//新建
         copy.removeClass('jt2').addClass('jt3'); 
         copy.find('h3').html("修改绑定邮箱");
@@ -390,13 +390,13 @@
 
      }
 
-     var countdown=60; 
+     var countdown = 60;
      function settime(obj) { //发送验证码倒计时
      if (countdown == 0) { 
          obj.attr('disabled',false); 
          //obj.removeattr("disabled"); 
          obj.val("获取验证码");
-         countdown = 60; 
+         countdown = 60;
          return;
      } else { 
          obj.attr('disabled',true);
